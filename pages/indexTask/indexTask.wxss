@@ -1,0 +1,83 @@
+.__indexTask {
+}
+
+.swiper-tab {
+    display: flex;
+    flex-direction: row;
+    line-height: 44px;
+    position: fixed;
+    width: 100%;
+    background: #fff;
+    z-index: 999;
+}
+
+.tab-item {
+    width: 33.3%;
+    text-align: center;
+    font-size: 30rpx;
+    font-weight: 600;
+    color: #333333;
+    padding: 0 45rpx;
+}
+
+.swiper {
+    width: 100%;
+    padding-top: 44px;
+}
+
+.swiper swiper-item {
+    height: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.active {
+    color: #27ccaa;
+    border-bottom: 5rpx solid #27ccaa;
+}
+
+
+
+
+.blockList {
+    margin: 0 30rpx 30rpx;
+    border-radius: 15rpx;
+    overflow: hidden;
+    padding: 20rpx;
+    background: #fff;
+}
+
+.blockList .bg {
+    width: 100%;
+    height: 366rpx;
+}
+
+.blockList .title {
+    color: #333333;
+    font-size: 28rpx;
+    font-weight: 600;
+}
+
+.blockList .tip {
+    overflow: hidden;
+}
+
+.blockList .tip .name {
+    float: left;
+}
+
+.blockList .tip .view {
+    float: right;
+}
+
+.blockList .tip image {
+    width: 30rpx;
+    height: 30rpx;
+    vertical-align: middle;
+}
+
+.blockList .tip text {
+    color: #999999;
+    font-size: 24rpx;
+    margin-left: 10rpx;
+}

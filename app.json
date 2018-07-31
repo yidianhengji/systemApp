@@ -1,0 +1,37 @@
+{
+  "pages":[
+    "pages/indexTask/indexTask",
+    "pages/indexHome/indexHome",
+    "pages/indexUser/indexUser",
+    "pages/indexCode/indexCode",
+    "pages/index/index",
+    "pages/logs/logs"
+  ],
+  "window":{
+    "backgroundTextStyle":"#fff",
+    "navigationBarBackgroundColor": "#27ccaa",
+    "navigationBarTitleText": "绿色账户",
+    "navigationBarTextStyle":"#fff"
+  },
+  "tabBar": {
+    "color": "#666666",
+    "selectedColor": "#27ccaa",
+    "borderStyle": "white",
+    "backgroundColor": "white",
+    "list": 
+        [
+            {
+                "pagePath": "pages/indexHome/indexHome",
+                "text": "首页",
+                "iconPath": "pages/image/tabbar/icon1.png",
+                "selectedIconPath": "pages/image/tabbar/icon1A.png"
+            },
+            {
+                "pagePath": "pages/indexUser/indexUser",
+                "text": "我的",
+                "iconPath": "pages/image/tabbar/icon2.png",
+                "selectedIconPath": "pages/image/tabbar/icon2A.png"
+            }
+        ]
+    }
+}

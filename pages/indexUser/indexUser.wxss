@@ -1,0 +1,193 @@
+.__indexUser {
+}
+
+.bannerBg {
+    position: relative;
+    height: 348rpx;
+}
+
+.bannerBg image {
+    width: 100%;
+    height: 348rpx;
+}
+
+.settingBtn {
+    position: absolute;
+    right: 20px;
+    top: 20rpx;
+}
+
+.settingBtn image {
+    width: 50rpx;
+    height: 50rpx;
+    margin-left: 20px;
+}
+
+.userPhotoBox {
+    position: absolute;
+    left: 50%;
+    top: 10rpx;
+    width: 150rpx;
+    height: 150rpx;
+    background: #fff;
+    border-radius: 50%;
+    margin-left: -75rpx;
+    text-align: center;
+}
+
+.userPhotoBox image {
+    width: 140rpx;
+    height: 140rpx;
+    border-radius: 50%;
+    margin: 5rpx;
+    overflow: hidden;
+}
+
+.userPhotoBox text {
+    color: #333;
+    font-size: 32rpx;
+    font-weight: 600;
+}
+
+.tipListBox {
+    position: absolute;
+    left: 30rpx;
+    right: 30rpx;
+    bottom: -98rpx;
+    height: 196rpx;
+    background: #fff;
+    z-index: 999;
+    box-sizing: border-box;
+    border-radius: 15rpx;
+    overflow: hidden;
+    box-shadow: 0px 2px 4px 2px rgba(30, 161, 134, 0.4);
+}
+
+.tipListBox > view {
+    position: relative;
+    width: 100%;
+}
+
+.tipListBox > view > view {
+    width: 33%;
+    float: left;
+    text-align: center;
+    margin-top: 20rpx;
+    position: relative;
+}
+
+.tipListBox > view > view::after {
+    content: "";
+    right: 0px;
+    top: 45rpx;
+    background-image: -moz-linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgb(39, 204, 170) 48%, rgba(39, 204, 170, 0) 100%);
+    background-image: -webkit-linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgb(39, 204, 170) 48%, rgba(39, 204, 170, 0) 100%);
+    background-image: -ms-linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgb(39, 204, 170) 48%, rgba(39, 204, 170, 0) 100%);
+    position: absolute;
+    width: 1px;
+    height: 80rpx;
+    z-index: 62;
+}
+
+.tipListBox > view > view:last-child::after {
+    content: "";
+    right: 0px;
+    top: 0rpx;
+    background-image: -moz-linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgb(39, 204, 170) 48%, rgba(39, 204, 170, 0) 100%);
+    background-image: -webkit-linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgb(39, 204, 170) 48%, rgba(39, 204, 170, 0) 100%);
+    background-image: -ms-linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgb(39, 204, 170) 48%, rgba(39, 204, 170, 0) 100%);
+    position: absolute;
+    width: 0px;
+    height: 0rpx;
+    z-index: 62;
+}
+
+.tipListBox > view > view image {
+    width: 104rpx;
+    height: 104rpx;
+    margin: 0 auto;
+    display: block;
+}
+
+.tipListBox > view > view text {
+    color: #333;
+    font-size: 28rpx;
+    font-weight: 600;
+    display: block;
+}
+
+.tipListBox > view > view:nth-child(2) text:nth-child(1) {
+    width: 100%;
+    height: 104rpx;
+    display: block;
+    text-align: center;
+    line-height: 104rpx;
+    color: #27ccaa;
+    font-size: 40rpx;
+}
+
+.userList {
+    margin-top: 100rpx;
+    padding: 30rpx;
+}
+
+.userList ul {
+    display: block;
+    padding: 0 30rpx;
+    background: #fff;
+    box-sizing: border-box;
+    border-radius: 15rpx;
+    overflow: hidden;
+    box-shadow: 0px 2px 4px 2px rgba(30, 161, 134, 0.4);
+}
+
+.userList ul li {
+    display: block;
+    height: 45px;
+    line-height: 45px;
+    border-bottom: 1px solid #ccc;
+    color: #333;
+    font-size: 28rpx;
+    font-weight: 600;
+    position: relative;
+}
+
+.userList ul li:last-child {
+    border-bottom: none;
+}
+
+.userList ul li::after {
+    content: "";
+    position: absolute;
+    right: 0px;
+    top: 15.5px;
+    width: 7px;
+    height: 14px;
+    display: block;
+    z-index: 99;
+    background-image: url("https://file.yunji01.com/committee/000015/20180707/20180707174224132260.png");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+.userList ul li text {
+    position: absolute;
+    right: 20px;
+    top: 13.5px;
+    background: #e3393c;
+    width: 18px;
+    height: 18px;
+    line-height: 18px;
+    text-align: center;
+    border-radius: 50%;
+    color: #fff;
+    font-size: 12px;
+}
+
+.userList image {
+    width: 45rpx;
+    height: 45rpx;
+    vertical-align: middle;
+    margin-top: -5px;
+    margin-right: 5px;
+}

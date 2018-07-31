@@ -1,0 +1,32 @@
+<view class="__indexTask">
+    <view class="swiper-tab">
+        <view class="tab-item {{currentTab==0 ? 'active' : ''}}" data-current="0" bindtap="swichNav">未开始</view>
+        <view class="tab-item {{currentTab==1 ? 'active' : ''}}" data-current="1" bindtap="swichNav">进行中</view>
+        <view class="tab-item {{currentTab==2 ? 'active' : ''}}" data-current="2" bindtap="swichNav">已结束</view>
+    </view>
+    <!--内容主体-->
+    <swiper class="swiper" style="height:{{[windowHeight]}}px;" current="{{currentTab}}" duration="200" bindchange="swiperChange">
+        <swiper-item>
+            <view class="blockList">
+                <image class="bg" src="http://img02.tooopen.com/images/20150928/tooopen_sy_143912755726.jpg"></image>
+                <text class="title">活动名称</text>
+                <view class="tip">
+                    <view class="name">
+                        <image src="../image/userName.png"></image>
+                        <text>张三</text>
+                    </view>
+                    <view class="view">
+                        <image src="../image/userView.png"></image>
+                        <text>1511</text>
+                    </view>
+                </view>
+            </view>
+        </swiper-item>
+        <swiper-item>
+            <view>我是tab2</view>
+        </swiper-item>
+        <swiper-item>
+            <view>我是tab3</view>
+        </swiper-item>
+    </swiper>
+</view>

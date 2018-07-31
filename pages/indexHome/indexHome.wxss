@@ -1,0 +1,187 @@
+.__indexHome {
+    position: relative;
+}
+
+.bgBanner {
+    background: #27ccaa;
+    height: 200rpx;
+    margin-bottom: 120rpx;
+}
+
+.bgBannerBox {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 99;
+    height: 300rpx;
+    width: 100%;
+    padding: 0 30rpx;
+    box-sizing: border-box;
+}
+
+.bgBannerBox image {
+    width: 100%;
+    height: 100%;
+    border-radius: 15rpx;
+    overflow: hidden;
+    box-shadow: 0px 2px 4px 2px rgba( 30, 161, 134 , 0.4 );
+}
+
+.btnAreaBg {
+    margin: 0 30rpx 30rpx;
+    height: 315rpx;
+    background-image: url("http://chuantu.biz/t6/351/1533003182x-1566688706.jpg");
+    background-size: 100%;
+    border-radius: 15rpx;
+    overflow: hidden;
+    box-shadow: 0px 2px 4px 2px rgba( 30, 161, 134 , 0.4 );
+}
+
+.btnAreaBg .iconList {
+    float: left;
+    width: 25%;
+    text-align: center;
+    margin-top: 15rpx;
+}
+
+.btnAreaBg .iconList image {
+    width: 88rpx;
+    height: 88rpx;
+    display: block;
+    margin: 0 auto;
+}
+
+.btnAreaBg .iconList text {
+    font-size: 24rpx;
+    color: #333333;
+    font-weight: 600;
+}
+
+/*栏目名称样式*/
+.box {
+    margin-top: 15rpx;    
+}
+
+.box .box-head {
+    position: relative;
+    overflow: hidden;
+    height: 70rpx;
+}
+
+.box .box-head image {
+    width: 400rpx;
+    height: 60rpx;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -200rpx;
+    margin-top: -30rpx;
+}
+
+.box .box-head text {
+    position: absolute;
+    left: -5px;
+    top: 0px;
+    width: 100%;
+    text-align: center;
+    z-index: 3;
+    color: #333333;
+    font-size: 32rpx;
+    font-weight: 600;
+}
+
+/*竖行列表样式*/
+.blockList {
+    margin: 0 30rpx 30rpx;
+    border-radius: 15rpx;
+    overflow: hidden;
+    box-shadow: 0px 2px 4px 2px rgba( 30, 161, 134 , 0.4 );
+    padding: 20rpx;
+}
+
+.blockList .bg {
+    width: 100%;
+    height: 366rpx;
+}
+
+.blockList .title {
+    color: #333333;
+    font-size: 28rpx;
+    font-weight: 600;
+}
+
+.blockList .tip {
+    overflow: hidden;
+}
+
+.blockList .tip .name {
+    float: left;
+}
+
+.blockList .tip .view {
+    float: right;
+}
+
+.blockList .tip image {
+    width: 30rpx;
+    height: 30rpx;
+    vertical-align: middle;
+}
+
+.blockList .tip text {
+    color: #999999;
+    font-size: 24rpx;
+    margin-left: 10rpx;
+}
+
+.swiperList {
+    width: 100%;
+    height: 560rpx;
+}
+
+.swiperImgBox {
+    padding: 20rpx;
+    background: transparent;
+}
+
+.swiperImgBoxPdd {
+    padding: 20rpx;
+    border-radius: 15rpx;
+    overflow: hidden;
+    box-shadow: 0px 2px 4px 2px rgba( 30, 161, 134 , 0.4 );
+}
+
+.swiperImgBox .bg {
+    width: 100%;
+    height: 366rpx;
+}
+
+.swiperImgBox .title {
+    color: #333333;
+    font-size: 28rpx;
+    font-weight: 600;
+}
+
+.swiperImgBox .tip {
+    overflow: hidden;
+}
+
+.swiperImgBox .tip .name {
+    float: left;
+}
+
+.swiperImgBox .tip .view {
+    float: right;
+}
+
+.swiperImgBox .tip image {
+    width: 30rpx;
+    height: 30rpx;
+    vertical-align: middle;
+}
+
+.swiperImgBox .tip text {
+    color: #999999;
+    font-size: 24rpx;
+    margin-left: 10rpx;
+}

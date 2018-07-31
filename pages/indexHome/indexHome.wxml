@@ -1,0 +1,99 @@
+<view class="__indexHome">
+    <view class="bgBanner"></view>
+
+    <view class="bgBannerBox">
+        <image src="../image/banner.png"></image>
+    </view>
+
+    <view class="btnAreaBg">
+        <view class="iconList" wx:for="{{btnAreaData}}" wx:key="index" wx:for-item="item" bindtap="clickIndexView" data-item-path="{{item.path}}" data-item-title="{{item.name}}">
+            <image src="{{item.imgurl}}"></image>
+            <text>{{item.name}}</text>
+        </view>
+    </view>
+    
+    <view class="box">
+        <view class="box-head">
+            <image src="../image/title.png"></image>
+            <text>活动列表</text>
+        </view>
+        <view class="box-body">
+            <view class="swiperList">
+            <!-- circular="true" -->
+                <swiper previous-margin="60rpx" next-margin="60rpx" current="1" circular="true" style="width: 100%; height: 100%;">
+                    <block wx:for="{{imgUrls}}" wx:for-item="item" wx:index="index">
+                        <swiper-item class="swiper-item">
+                            <view class="swiperImgBox">
+                                <view class="swiperImgBoxPdd">
+                                    <image class="bg" src="{{item}}" />
+                                    <text class="title">活动名称</text>
+                                    <view class="tip">
+                                        <view class="name">
+                                            <image src="../image/userName.png"></image>
+                                            <text>张三</text>
+                                        </view>
+                                        <view class="view">
+                                            <image src="../image/userView.png"></image>
+                                            <text>1511</text>
+                                        </view>
+                                    </view>
+                                </view>
+                            </view>
+                        </swiper-item>
+                    </block>
+                </swiper>
+            </view>
+        </view>
+    </view>
+    
+    <view class="box">
+        <view class="box-head">
+            <image src="../image/title.png"></image>
+            <text>任务列表</text>
+        </view>
+        <view class="box-body">
+            <view class="blockList">
+                <image class="bg" src="http://img02.tooopen.com/images/20150928/tooopen_sy_143912755726.jpg"></image>
+                <text class="title">活动名称</text>
+                <view class="tip">
+                    <view class="name">
+                        <image src="../image/userName.png"></image>
+                        <text>张三</text>
+                    </view>
+                    <view class="view">
+                        <image src="../image/userView.png"></image>
+                        <text>1511</text>
+                    </view>
+                </view>
+            </view>
+            <view class="blockList">
+                <image class="bg" src="http://img02.tooopen.com/images/20150928/tooopen_sy_143912755726.jpg"></image>
+                <text class="title">活动名称</text>
+                <view class="tip">
+                    <view class="name">
+                        <image src="../image/userName.png"></image>
+                        <text>张三</text>
+                    </view>
+                    <view class="view">
+                        <image src="../image/userView.png"></image>
+                        <text>1511</text>
+                    </view>
+                </view>
+            </view>
+            <view class="blockList">
+                <image class="bg" src="http://img02.tooopen.com/images/20150928/tooopen_sy_143912755726.jpg"></image>
+                <text class="title">活动名称</text>
+                <view class="tip">
+                    <view class="name">
+                        <image src="../image/userName.png"></image>
+                        <text>张三</text>
+                    </view>
+                    <view class="view">
+                        <image src="../image/userView.png"></image>
+                        <text>1511</text>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>

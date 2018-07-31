@@ -1,9 +1,9 @@
 {
   "pages":[
-    "pages/indexTask/indexTask",
     "pages/indexHome/indexHome",
     "pages/indexUser/indexUser",
     "pages/indexCode/indexCode",
+    "pages/indexTask/indexTask",
     "pages/index/index",
     "pages/logs/logs"
   ],

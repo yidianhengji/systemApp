@@ -10,15 +10,37 @@
             <view class="blockList">
                 <image class="bg" src="http://img02.tooopen.com/images/20150928/tooopen_sy_143912755726.jpg"></image>
                 <text class="title">活动名称</text>
-                <view class="tip">
-                    <view class="name">
-                        <image src="../image/userName.png"></image>
-                        <text>张三</text>
-                    </view>
-                    <view class="view">
-                        <image src="../image/userView.png"></image>
-                        <text>1511</text>
-                    </view>
+                <view class="time">
+                    <image src="../image/time.png"></image>
+                    <text>张三</text>
+                </view>
+                <view class="place">
+                    <image src="../image/place.png"></image>
+                    <text>1511</text>
+                </view>
+            </view>
+            <view class="blockList">
+                <image class="bg" src="http://img02.tooopen.com/images/20150928/tooopen_sy_143912755726.jpg"></image>
+                <text class="title">活动名称</text>
+                <view class="time">
+                    <image src="../image/time.png"></image>
+                    <text>张三</text>
+                </view>
+                <view class="place">
+                    <image src="../image/place.png"></image>
+                    <text>1511</text>
+                </view>
+            </view>
+            <view class="blockList">
+                <image class="bg" src="http://img02.tooopen.com/images/20150928/tooopen_sy_143912755726.jpg"></image>
+                <text class="title">活动名称</text>
+                <view class="time">
+                    <image src="../image/time.png"></image>
+                    <text>张三</text>
+                </view>
+                <view class="place">
+                    <image src="../image/place.png"></image>
+                    <text>1511</text>
                 </view>
             </view>
         </swiper-item>

@@ -16,13 +16,17 @@
     text-align: center;
     font-size: 30rpx;
     font-weight: 600;
-    color: #333333;
+    color: #333;
     padding: 0 45rpx;
 }
 
 .swiper {
     width: 100%;
-    padding-top: 44px;
+    position: absolute;
+    left: 0px;
+    top: 44px;
+    padding: 30rpx;
+    box-sizing: border-box;
 }
 
 .swiper swiper-item {
@@ -36,11 +40,8 @@
     border-bottom: 5rpx solid #27ccaa;
 }
 
-
-
-
 .blockList {
-    margin: 0 30rpx 30rpx;
+    margin-bottom: 20rpx;
     border-radius: 15rpx;
     overflow: hidden;
     padding: 20rpx;
@@ -53,31 +54,19 @@
 }
 
 .blockList .title {
-    color: #333333;
+    color: #333;
     font-size: 28rpx;
     font-weight: 600;
 }
 
-.blockList .tip {
-    overflow: hidden;
-}
-
-.blockList .tip .name {
-    float: left;
-}
-
-.blockList .tip .view {
-    float: right;
-}
-
-.blockList .tip image {
+.blockList .time image, .blockList .place image {
     width: 30rpx;
     height: 30rpx;
     vertical-align: middle;
 }
 
-.blockList .tip text {
-    color: #999999;
+.blockList .time text, .blockList .place text {
+    color: #999;
     font-size: 24rpx;
     margin-left: 10rpx;
 }

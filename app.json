@@ -1,9 +1,11 @@
 {
   "pages":[
+    "pages/indexTaskView/indexTaskView",
     "pages/indexHome/indexHome",
     "pages/indexUser/indexUser",
     "pages/indexCode/indexCode",
     "pages/indexTask/indexTask",
+    "pages/indexActivity/indexActivity",
     "pages/index/index",
     "pages/logs/logs"
   ],

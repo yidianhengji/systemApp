@@ -1,0 +1,7 @@
+<view class="__indexNews">
+    <view class="list" wx:for="1234" data-item-uuid="123" bindtap="clickViewPage">
+        <view class="title text-ov">东北大米 农家新米2.5KGG/袋</view>
+        <view class="WViewRow1" style="">工欲善其事必先利其器。layout设计工具是为小程序开发而专门定制的。开发初衷是为了提高UI设计效率。在平时项目开发时，由于本人不是专业美工设计，因此在UI设计上浪费了很多时间。所以“一怒之下”开发了这个工具。</view>
+        <view class="time">创建时间：2018-7-18 10:00</view>
+    </view>
+</view>

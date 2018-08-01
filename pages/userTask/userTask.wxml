@@ -1,0 +1,15 @@
+<view class="__indexTask">
+    <view class="blockList" wx:for="123213" data-item-uuid="123" bindtap="clickViewPage">
+        <image class="bg" src="http://img02.tooopen.com/images/20150928/tooopen_sy_143912755726.jpg"></image>
+        <text class="title">活动名称</text>
+        <view class="time">
+            <image src="../image/time.png"></image>
+            <text>张三</text>
+        </view>
+        <view class="place">
+            <image src="../image/place.png"></image>
+            <text>1511</text>
+            <text class="status text-red">未开始</text>
+        </view>
+    </view>
+</view>

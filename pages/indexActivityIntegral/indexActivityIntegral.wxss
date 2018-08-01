@@ -1,0 +1,50 @@
+.__indexActivityIntegral {
+    padding: 20rpx;
+}
+
+.list {
+    overflow: hidden;
+    background: #fff;
+    border-radius: 15rpx;
+    padding: 20rpx;
+    margin-bottom: 15rpx;
+}
+
+.list image {
+    width: 100rpx;
+    height: 100rpx;
+    float: left;
+    margin-right: 20rpx;
+    border-radius: 50%;
+}
+
+.listText {
+    
+}
+
+.title {
+    color: #333333;
+    font-size: 32rpx;
+    font-weight: 600;
+}
+
+.rest {
+    color: #666666;
+    font-size: 24rpx;
+    margin-top: 20rpx;
+}
+
+.listBtn {
+    border: 1px solid #27ccaa;
+    background-color: rgb( 39, 204, 170 );
+    width: 120rpx !important;
+    display: inline-block;
+    height: 50rpx;
+    line-height: 50rpx;
+    text-align: center;
+    border-radius: 25rpx;
+    font-size: 24rpx;
+    color: #ffffff;
+    float: right;
+    margin-top: 28rpx;
+}

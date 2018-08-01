@@ -1,29 +1,27 @@
-// pages/indexUser/indexUser.js
-const app = getApp();
-console.log(app)
-
+// pages/indexExchange/indexExchange.js
 Page({
 
     /**
      * 页面的初始数据
      */
     data: {
-        userInfoList: app.globalData.userInfo,
-        dataList1: [
-            { name: '我的活动', icon: '1', path: '../userActivity/userActivity' },
-            { name: '我的任务', icon: '6', path: '../userTask/userTask' },
-            { name: '积分排行', icon: '3', path: '../indexTop/indexTop' },
-            { name: '我的消息', icon: '5', path: '../userNews/userNews' },
-            { name: '兑换记录', icon: '5', path: '../userExchange/userExchange' },
-        ],
+
     },
 
-    clickIndexView(event){
-        if (event.currentTarget.dataset.itemPath != '') {
-            wx.navigateTo({
-                url: event.currentTarget.dataset.itemPath + '?title=' + event.currentTarget.dataset.itemTitle
-            })
-        }
+    //兑换弹窗
+    exchangeBtn(event){
+        console.log(event.currentTarget.dataset.itemUuid)
+        wx.showModal({
+            title: '温馨提示',
+            content: '是否确认兑换该奖品？',
+            success: function (res) {
+                if (res.confirm) {
+                    console.log('用户点击确定')
+                } else if (res.cancel) {
+                    console.log('用户点击取消')
+                }
+            }
+        })
     },
 
     /**

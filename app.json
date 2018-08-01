@@ -1,27 +1,36 @@
 {
-  "pages":[
-    "pages/indexTaskView/indexTaskView",
-    "pages/indexHome/indexHome",
-    "pages/indexUser/indexUser",
-    "pages/indexCode/indexCode",
-    "pages/indexTask/indexTask",
-    "pages/indexActivity/indexActivity",
-    "pages/index/index",
-    "pages/logs/logs"
-  ],
-  "window":{
-    "backgroundTextStyle":"#fff",
-    "navigationBarBackgroundColor": "#27ccaa",
-    "navigationBarTitleText": "绿色账户",
-    "navigationBarTextStyle":"#fff"
-  },
-  "tabBar": {
-    "color": "#666666",
-    "selectedColor": "#27ccaa",
-    "borderStyle": "white",
-    "backgroundColor": "white",
-    "list": 
-        [
+    "pages": [
+        "pages/indexHome/indexHome",
+        "pages/indexUser/indexUser",
+        "pages/indexCode/indexCode",
+        "pages/indexTask/indexTask",
+        "pages/indexTaskView/indexTaskView",
+        "pages/indexActivity/indexActivity",
+        "pages/indexActivityView/indexActivityView",
+        "pages/indexActivityIntegral/indexActivityIntegral",
+        "pages/indexExchange/indexExchange",
+        "pages/indexTop/indexTop",
+        "pages/indexNews/indexNews",
+        "pages/indexNewsView/indexNewsView",
+        "pages/userNews/userNews",
+        "pages/userExchange/userExchange",
+        "pages/userActivity/userActivity",
+        "pages/userTask/userTask",
+        "pages/index/index",
+        "pages/logs/logs"
+    ],
+    "window": {
+        "backgroundTextStyle": "#fff",
+        "navigationBarBackgroundColor": "#27ccaa",
+        "navigationBarTitleText": "绿色账户",
+        "navigationBarTextStyle": "#fff"
+    },
+    "tabBar": {
+        "color": "#666666",
+        "selectedColor": "#27ccaa",
+        "borderStyle": "white",
+        "backgroundColor": "white",
+        "list": [
             {
                 "pagePath": "pages/indexHome/indexHome",
                 "text": "首页",

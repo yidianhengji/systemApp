@@ -14,3 +14,10 @@ page {
     background: #eee;
     width: 100%;
 }
+
+/*超出省略号*/
+.text-ov {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}

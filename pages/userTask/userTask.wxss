@@ -1,0 +1,47 @@
+.__indexTask {
+    padding: 20rpx;
+}
+
+.blockList {
+    margin-bottom: 20rpx;
+    border-radius: 15rpx;
+    overflow: hidden;
+    padding: 20rpx;
+    background: #fff;
+}
+
+.blockList .bg {
+    width: 100%;
+    height: 366rpx;
+}
+
+.blockList .title {
+    color: #333;
+    font-size: 28rpx;
+    font-weight: 600;
+}
+
+.blockList .time image, .blockList .place image {
+    width: 30rpx;
+    height: 30rpx;
+    vertical-align: middle;
+}
+
+.blockList .time text, .blockList .place text {
+    color: #999;
+    font-size: 24rpx;
+    margin-left: 10rpx;
+}
+
+.status {
+    float: right;
+    margin-top: 15rpx;
+}
+
+.text-red {
+    color: #fb6262 !important;
+}
+
+.text-gerrn {
+    color: #27ccaa !important;
+}

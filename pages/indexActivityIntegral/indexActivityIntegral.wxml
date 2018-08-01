@@ -1,0 +1,10 @@
+<view class="__indexActivityIntegral">
+    <view class="list" wx:for="123213">
+        <image src="../image/listBg1.png"></image>
+        <view class="listText">
+            <text class="listBtn" data-item-uuid="1" bindtap="exchangeBtn">派发</text>
+            <view class="title text-ov">张三</view>
+            <view class="rest">积分：20</view>
+        </view>
+    </view>
+</view>

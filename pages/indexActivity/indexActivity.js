@@ -9,6 +9,20 @@ Page({
         windowHeight: 　''
     },
 
+    //跳转详情
+    clickViewPage(event) {
+        wx.navigateTo({
+            url: '../indexActivityView/indexActivityView?uuid=' + event.currentTarget.dataset.itemUuid + ''
+        })
+    },
+    
+    //积分派发
+    clickViewPageExchange(event){
+        wx.navigateTo({
+            url: '../indexActivityIntegral/indexActivityIntegral?uuid=' + event.currentTarget.dataset.itemUuid + ''
+        })
+    },
+
     /**
      * 生命周期函数--监听页面加载
      */

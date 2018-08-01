@@ -1,29 +1,17 @@
-// pages/indexUser/indexUser.js
-const app = getApp();
-console.log(app)
-
+// pages/indexNews/indexNews.js
 Page({
 
     /**
      * 页面的初始数据
      */
     data: {
-        userInfoList: app.globalData.userInfo,
-        dataList1: [
-            { name: '我的活动', icon: '1', path: '../userActivity/userActivity' },
-            { name: '我的任务', icon: '6', path: '../userTask/userTask' },
-            { name: '积分排行', icon: '3', path: '../indexTop/indexTop' },
-            { name: '我的消息', icon: '5', path: '../userNews/userNews' },
-            { name: '兑换记录', icon: '5', path: '../userExchange/userExchange' },
-        ],
+
     },
 
-    clickIndexView(event){
-        if (event.currentTarget.dataset.itemPath != '') {
-            wx.navigateTo({
-                url: event.currentTarget.dataset.itemPath + '?title=' + event.currentTarget.dataset.itemTitle
-            })
-        }
+    clickViewPage(event){
+        wx.navigateTo({
+            url: '../indexNewsView/indexNewsView?uuid=' + event.currentTarget.dataset.itemUuid+''
+        })
     },
 
     /**

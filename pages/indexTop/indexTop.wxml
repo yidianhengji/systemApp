@@ -1,0 +1,8 @@
+<view class="__indexTop">
+    <view class="list" wx:for="{{dataList}}" wx:key="index" wx:for-item="item">
+        <text class="serial">{{index+1}}</text>
+        <image src="https://wx.qlogo.cn/mmopen/vi_32/pbjIJqM0Sxv6iaIXmrrqb8saO0weAVqaBhC2u68tmNNxJ7BGGsebVeQgKye8b37ykXFdauXic7TST7QsJEuYicsng/132"></image>
+        <text class="name">{{item.name}}</text>
+        <text class="number">{{item.nub}}分</text>
+    </view>
+</view>

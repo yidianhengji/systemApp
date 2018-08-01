@@ -7,9 +7,9 @@ Page({
             { 'name': '垃圾分类', 'imgurl': '../image/icon/icon3.png', 'path': '' },
             { 'name': '任务中心', 'imgurl': '../image/icon/icon4.png', 'path': '../indexTask/indexTask' },
             { 'name': '活动中心', 'imgurl': '../image/icon/icon5.png', 'path': '../indexActivity/indexActivity' },
-            { 'name': '积分排行', 'imgurl': '../image/icon/icon6.png', 'path': '' },
-            { 'name': '消息中心', 'imgurl': '../image/icon/icon7.png', 'path': '' },
-            { 'name': '奖品兑换', 'imgurl': '../image/icon/icon8.png', 'path': '' },
+            { 'name': '积分排行', 'imgurl': '../image/icon/icon6.png', 'path': '../indexTop/indexTop' },
+            { 'name': '消息中心', 'imgurl': '../image/icon/icon7.png', 'path': '../indexNews/indexNews' },
+            { 'name': '奖品兑换', 'imgurl': '../image/icon/icon8.png', 'path': '../indexExchange/indexExchange' },
         ],
         imgUrls: [
             'http://img02.tooopen.com/images/20150928/tooopen_sy_143912755726.jpg',

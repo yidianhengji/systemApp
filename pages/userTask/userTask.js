@@ -5,50 +5,13 @@ Page({
      * 页面的初始数据
      */
     data: {
-        currentTab: 0,
-        windowHeight:　''
+        
     },
-    
+
     //跳转详情
     clickViewPage(event) {
         wx.navigateTo({
             url: '../indexTaskView/indexTaskView?uuid=' + event.currentTarget.dataset.itemUuid + ''
-        })
-    },
-
-    /**
-     * 生命周期函数--监听页面加载
-     */
-    onLoad: function (options) {
-        var that = this;
-        wx.getSystemInfo({
-            success: function (res) {
-                that.setData({
-                    windowHeight: res.windowHeight - 44,
-                    // canvasHidden:true
-                });
-            }
-        })
-    },
-
-    swichNav: function (e) {
-        console.log(e);
-        var that = this;
-        if (this.data.currentTab === e.target.dataset.current) {
-            return false;
-        } else {
-            that.setData({
-                currentTab: e.target.dataset.current,
-            })
-        }
-    },
-    /**
-     * 导航页面显示2）
-     */
-    swiperChange: function (e) {
-        console.log(e);
-        this.setData({
-            currentTab: e.detail.current,
         })
     },
 

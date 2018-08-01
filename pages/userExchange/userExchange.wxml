@@ -1,0 +1,35 @@
+<view class="__indexExchange">
+    <view class="list">
+        <image src="../image/listBg1.png"></image>
+        <view class="listText">
+            <view class="title text-ov">东北大米 农家新米2.5KGG/袋</view>
+            <view class="tip">
+                <text class="status text-green">已兑换</text>
+                <text class="rest">剩余：50</text>
+            </view>
+        </view>
+    </view>
+    <view class="list">
+        <image src="../image/listBg1.png"></image>
+        <view class="listText">
+            <view class="title text-ov">东北大米 农家新米2.5KGG/袋</view>
+            <view class="tip">
+                <text class="status text-red">未兑换</text>
+                <text class="rest">剩余：50</text>
+                <text class="listBtn" data-item-uuid="1" bindtap="exchangeBtn">兑换</text>
+            </view>
+        </view>
+    </view>
+</view>
+
+<view class="modal-box" hidden="{{flag}}" bindtap="hide">
+    <view class="modal-body">
+        <view class="modal-content">
+            <image src="{{imagePath}}" class="fenxiang"></image>
+        </view>
+    </view>
+</view>
+
+<view class="canvas-box">
+  <canvas  hidden="{{canvasHidden}}" style="width: 686rpx;height: 686rpx;background:#f1f1f1;" canvas-id="mycanvas"/>
+</view>

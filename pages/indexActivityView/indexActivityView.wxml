@@ -29,7 +29,7 @@
     </view>
     <view class="listBox">
         <view class="listBox-hade">
-            <text>任务简介</text>
+            <text>活动简介</text>
         </view>
         <view class="listBox-body">
             <view class="text">

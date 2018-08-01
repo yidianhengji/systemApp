@@ -1,0 +1,46 @@
+.__indexTop {
+    padding: 20rpx;
+}
+
+.list {
+    overflow: hidden;
+    background: #fff;
+    padding: 20rpx 25rpx;
+    border-radius: 15rpx;
+    margin-bottom: 15rpx;
+}
+
+.list text {
+    display: inline-block;
+    vertical-align: middle;
+    height: 80rpx;
+    line-height: 80rpx;
+}
+
+.list .serial {
+    color: #333333;
+    font-size: 36rpx;
+    font-weight: 600;
+}
+
+.list image {
+    width: 80rpx;
+    height: 80rpx;
+    overflow: hidden;
+    border-radius: 50%;
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0 20rpx;
+}
+
+.list .name {
+    color: #333333;
+    font-size: 32rpx;
+    font-weight: 600;
+}
+
+.list .number {
+    float: right;
+    color: #666666;
+    font-size: 24rpx;
+}

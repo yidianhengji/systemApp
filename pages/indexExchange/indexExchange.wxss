@@ -1,0 +1,61 @@
+.__indexExchange {
+    padding: 20rpx;
+}
+
+.list {
+    overflow: hidden;
+    background: #fff;
+    border-radius: 15rpx;
+    padding: 20rpx;
+    margin-bottom: 15rpx;
+}
+
+.list image {
+    width: 150rpx;
+    height: 150rpx;
+    float: left;
+    margin-right: 20rpx;
+}
+
+.listText {
+    
+}
+
+.title {
+    color: #333333;
+    font-size: 32rpx;
+    font-weight: 600;
+}
+
+.tip {
+    vertical-align: bottom;
+    overflow: hidden;
+    margin-top: 60rpx;
+}
+
+.tip text {
+    width: 33%;
+    display: inline-block;
+}
+
+.money {
+    color: #e15829;
+    font-size: 28rpx;
+}
+
+.rest {
+    color: #666666;
+    font-size: 24rpx;
+}
+
+.listBtn {
+    border: 1px solid #27ccaa;
+    background-color: rgb( 39, 204, 170 );
+    width: 120rpx !important;
+    height: 50rpx;
+    line-height: 50rpx;
+    text-align: center;
+    border-radius: 25rpx;
+    font-size: 24rpx;
+    color: #ffffff;
+}

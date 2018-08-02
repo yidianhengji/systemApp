@@ -28,8 +28,8 @@
     "tabBar": {
         "color": "#666666",
         "selectedColor": "#27ccaa",
-        "borderStyle": "white",
-        "backgroundColor": "white",
+        "borderStyle": "#fff",
+        "backgroundColor": "#fff",
         "list": [
             {
                 "pagePath": "pages/indexHome/indexHome",

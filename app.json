@@ -1,6 +1,8 @@
 {
     "pages": [
+        
         "pages/indexHome/indexHome",
+        "pages/login/login",
         "pages/indexUser/indexUser",
         "pages/indexCode/indexCode",
         "pages/indexTask/indexTask",

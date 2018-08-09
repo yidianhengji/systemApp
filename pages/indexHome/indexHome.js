@@ -33,7 +33,7 @@ Page({
         //查询活动列表
         
         //查询任务列表
-        //this.quertTaskQuery();
+        this.quertTaskQuery();
     },
     //查询任务列表
     quertTaskQuery(){

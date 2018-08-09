@@ -6,6 +6,7 @@ function requestGet(url, data, success) {
         dataType: 'json',
         data: data,
         header: {
+            "Cookie": "JSESSIONID="+getApp().globalData.sessionId,
             'Content-Type': 'application/json; charset=UTF-8'
         },
         success: function (res) {
@@ -41,7 +42,7 @@ function request(url, data, success) {
         data: data,
         xhrFields: { withCredentials: true },
         header: {
-            'cookie': app.globalData.sessionId,
+            "Cookie": "JSESSIONID=" + getApp().globalData.sessionId,
             'Content-Type': 'application/json; charset=UTF-8'
         },
         success: function (res) {
@@ -73,7 +74,7 @@ function requestHeader(url, data, success) {
         data: data,
         xhrFields: { withCredentials: true },
         header: {
-            'cookie': app.globalData.sessionId,
+            "Cookie": "JSESSIONID=" + getApp().globalData.sessionId,
             'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8'
         },
         success: function (res) {

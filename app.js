@@ -1,6 +1,6 @@
 var httpRequest = require('utils/request.js');
 App({
-    onLaunch: function () {
+    onLaunch: function() {
         // 展示本地存储能力
         var logs = wx.getStorageSync('logs') || []
         logs.unshift(Date.now())
@@ -16,8 +16,8 @@ App({
                     success: res => {
                         // 可以将 res 发送给后台解码出 unionId
                         this.globalData.userInfo = res.userInfo
-                        // 由于getUserInfo 是网络请求，可能会在 Page.onLoad 之后才返回
-                        // 所以此处加入 callback 以防止这种情况
+                            // 由于getUserInfo 是网络请求，可能会在 Page.onLoad 之后才返回
+                            // 所以此处加入 callback 以防止这种情况
                         if (this.userInfoReadyCallback) {
                             this.userInfoReadyCallback(res)
                         }
@@ -28,8 +28,8 @@ App({
                             sex: res.userInfo.gender,
                             headPic: res.userInfo.avatarUrl,
                         }
-                        httpRequest.requestGet('user/loginApp', data, function(data){
-                            if(data.code==200){
+                        httpRequest.requestGet('user/loginApp', data, function(data) {
+                            if (data.code == 200) {
                                 var app = getApp();
                                 app.globalData.isRealName = data.data.isRealName
                                 app.globalData.role = data.data.role
@@ -38,7 +38,7 @@ App({
                                     wx.showModal({
                                         title: '温馨提示',
                                         content: '您还未实名认证！请先实名认证。',
-                                        success: function (res) {
+                                        success: function(res) {
                                             if (res.confirm) {
                                                 wx.navigateTo({
                                                     url: '../userName/userName'
@@ -47,7 +47,7 @@ App({
                                                 console.log('用户点击取消')
                                             }
                                         },
-                                        fail: function (res) {
+                                        fail: function(res) {
                                             console.log("")
                                         }
                                     })
@@ -63,8 +63,8 @@ App({
         userInfo: null,
         //path: 'http://192.168.199.231:8090/backen/',
         path: 'http://192.168.199.231:8090/backen/',
-        isRealName: '',//实名认证
-        role: '',//角色身份
-        sessionId: '',//用户信息
+        isRealName: '', //实名认证
+        role: '', //角色身份
+        sessionId: '', //用户信息
     },
 })

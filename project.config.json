@@ -1,5 +1,4 @@
 {
-<<<<<<< HEAD
     "description": "项目配置文件。",
     "packOptions": {
         "ignore": []
@@ -34,40 +33,4 @@
             "list": []
         }
     }
-=======
-	"description": "项目配置文件。",
-	"packOptions": {
-		"ignore": []
-	},
-	"setting": {
-		"urlCheck": false,
-		"es6": true,
-		"postcss": true,
-		"minified": true,
-		"newFeature": true
-	},
-	"compileType": "miniprogram",
-	"libVersion": "2.2.1",
-	"appid": "wx6de76409aae82cdc",
-	"projectname": "systemApp",
-	"isGameTourist": false,
-	"condition": {
-		"search": {
-			"current": -1,
-			"list": []
-		},
-		"conversation": {
-			"current": -1,
-			"list": []
-		},
-		"game": {
-			"currentL": -1,
-			"list": []
-		},
-		"miniprogram": {
-			"current": -1,
-			"list": []
-		}
-	}
->>>>>>> ef5427c1fff30dd161e3375ce71446bf7394897c
 }

@@ -39,8 +39,10 @@ function request(url, data, success) {
         method: 'POST',
         dataType: 'json',
         data: data,
+        xhrFields: { withCredentials: true },
         header: {
-            'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8'
+            'cookie': app.globalData.sessionId,
+            'Content-Type': 'application/json; charset=UTF-8'
         },
         success: function (res) {
             if (res.data.code == 200) {
@@ -69,8 +71,9 @@ function requestHeader(url, data, success) {
         method: 'POST',
         dataType: 'json',
         data: data,
+        xhrFields: { withCredentials: true },
         header: {
-            'user_id': app.globalData.globalUserId,
+            'cookie': app.globalData.sessionId,
             'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8'
         },
         success: function (res) {

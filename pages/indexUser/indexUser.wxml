@@ -11,12 +11,12 @@
         </view>
         <view class="tipListBox">
             <view>
-                <view>
+                <view bindtap="clickIndexView" data-item-title="积分码">
                     <image src="../image/icon/user/icon1.png"></image>
                     <text>积分码</text>
                 </view>
                 <view>
-                    <text>16512分</text>
+                    <text>0分</text>
                     <text>我的积分</text>
                 </view>
                 <view>

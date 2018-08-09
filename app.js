@@ -21,16 +21,39 @@ App({
                         if (this.userInfoReadyCallback) {
                             this.userInfoReadyCallback(res)
                         }
+                        console.log(code);
                         var data = {
                             code: code,
                             nickName: res.userInfo.nickName,
-                            gender: res.userInfo.gender,
-                            avatarUrl: res.userInfo.avatarUrl,
+                            sex: res.userInfo.gender,
+                            headPic: res.userInfo.avatarUrl,
                         }
                         httpRequest.requestGet('user/loginApp', data, function(data){
-                            debugger
+                            if(data.code==200){
+                                var app = getApp();
+                                app.globalData.isRealName = data.data.isRealName
+                                app.globalData.role = data.data.role
+                                app.globalData.sessionId = data.data.sessionId
+                                if (data.data.isRealName == "2") {
+                                    wx.showModal({
+                                        title: '温馨提示',
+                                        content: '您还未实名认证！请先实名认证。',
+                                        success: function (res) {
+                                            if (res.confirm) {
+                                                wx.navigateTo({
+                                                    url: '../userName/userName'
+                                                })
+                                            } else if (res.cancel) {
+                                                console.log('用户点击取消')
+                                            }
+                                        },
+                                        fail: function (res) {
+                                            console.log("")
+                                        }
+                                    })
+                                }
+                            }
                         })
-
                     }
                 })
             }
@@ -38,6 +61,10 @@ App({
     },
     globalData: {
         userInfo: null,
+        //path: 'http://192.168.199.231:8090/backen/',
         path: 'http://192.168.199.231:8090/backen/',
-    }
+        isRealName: '',//实名认证
+        role: '',//角色身份
+        sessionId: '',//用户信息
+    },
 })

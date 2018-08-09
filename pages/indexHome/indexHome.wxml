@@ -4,11 +4,39 @@
     <view class="bgBannerBox">
         <image src="../image/banner.png"></image>
     </view>
-
+    
     <view class="btnAreaBg">
-        <view class="iconList" wx:for="{{btnAreaData}}" wx:key="index" wx:for-item="item" bindtap="clickIndexView" data-item-path="{{item.path}}" data-item-title="{{item.name}}">
-            <image src="{{item.imgurl}}"></image>
-            <text>{{item.name}}</text>
+        <view class="iconList" bindtap="clickIndexView" data-item-path="../indexCode/indexCode" data-item-title="积分码">
+            <image src="../image/icon/icon1.png"></image>
+            <text>积分码</text>
+        </view>
+        <view wx-if="{{role!=''}}" class="iconList" bindtap="clickIndexView" data-item-path="saoyisao" data-item-title="扫一扫">
+            <image src="../image/icon/icon2.png"></image>
+            <text>扫一扫</text>
+        </view>
+        <view class="iconList" bindtap="clickIndexView" data-item-path="" data-item-title="垃圾分类">
+            <image src="../image/icon/icon3.png"></image>
+            <text>垃圾分类</text>
+        </view>
+        <view class="iconList" bindtap="clickIndexView" data-item-path="../indexTask/indexTask" data-item-title="任务中心">
+            <image src="../image/icon/icon4.png"></image>
+            <text>任务中心</text>
+        </view>
+        <view class="iconList" bindtap="clickIndexView" data-item-path="../indexActivity/indexActivity" data-item-title="活动中心">
+            <image src="../image/icon/icon5.png"></image>
+            <text>活动中心</text>
+        </view>
+        <view class="iconList" bindtap="clickIndexView" data-item-path="../indexTop/indexTop" data-item-title="积分排行">
+            <image src="../image/icon/icon6.png"></image>
+            <text>积分排行</text>
+        </view>
+        <view class="iconList" bindtap="clickIndexView" data-item-path="../indexNews/indexNews" data-item-title="消息中心">
+            <image src="../image/icon/icon7.png"></image>
+            <text>消息中心</text>
+        </view>
+        <view class="iconList" bindtap="clickIndexView" data-item-path="../indexExchange/indexExchange" data-item-title="奖品兑换">
+            <image src="../image/icon/icon8.png"></image>
+            <text>奖品兑换</text>
         </view>
     </view>
     

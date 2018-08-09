@@ -2,7 +2,6 @@
     "pages": [
         
         "pages/indexHome/indexHome",
-        "pages/login/login",
         "pages/indexUser/indexUser",
         "pages/indexCode/indexCode",
         "pages/indexTask/indexTask",
@@ -12,6 +11,7 @@
         "pages/indexActivityIntegral/indexActivityIntegral",
         "pages/indexExchange/indexExchange",
         "pages/indexTop/indexTop",
+        "pages/userName/userName",
         "pages/indexNews/indexNews",
         "pages/indexNewsView/indexNewsView",
         "pages/userNews/userNews",
@@ -19,7 +19,9 @@
         "pages/userActivity/userActivity",
         "pages/userTask/userTask",
         "pages/index/index",
-        "pages/logs/logs"
+        "pages/logs/logs",
+
+        "pages/login/login"
     ],
     "window": {
         "backgroundTextStyle": "#fff",

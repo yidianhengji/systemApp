@@ -19,11 +19,35 @@ Page({
     },
 
     clickIndexView(event){
-        if (event.currentTarget.dataset.itemPath != '') {
-            wx.navigateTo({
-                url: event.currentTarget.dataset.itemPath + '?title=' + event.currentTarget.dataset.itemTitle
-            })
+        var app = getApp();
+        var title = event.currentTarget.dataset.itemTitle;
+        if (app.globalData.isRealName == 2) {
+            if (title == '积分码' || title == '我的活动' || title == '我的任务' || title == '积分排行' || title == '我的消息' || title == '兑换记录'){
+                wx.showModal({
+                    title: '温馨提示',
+                    content: '您还未实名认证！请先实名认证。',
+                    success: function (res) {
+                        if (res.confirm) {
+                            wx.navigateTo({
+                                url: '../userName/userName'
+                            })
+                        } else if (res.cancel) {
+                            console.log('用户点击取消')
+                        }
+                    },
+                    fail: function (res) {
+                        console.log("")
+                    }
+                })
+            }
+        }else {
+            if (event.currentTarget.dataset.itemPath != '') {
+                wx.navigateTo({
+                    url: event.currentTarget.dataset.itemPath + '?title=' + event.currentTarget.dataset.itemTitle
+                })
+            }
         }
+        
     },
 
     /**

@@ -21,15 +21,15 @@ App({
                         if (this.userInfoReadyCallback) {
                             this.userInfoReadyCallback(res)
                         }
-                        var data = {
-                            code: code,
-                            nickName: res.userInfo.nickName,
-                            gender: res.userInfo.gender,
-                            avatarUrl: res.userInfo.avatarUrl,
-                        }
-                        httpRequest.requestGet('user/loginApp', data, function(data){
-                            debugger
-                        })
+                        // var data = {
+                        //     code: code,
+                        //     nickName: res.userInfo.nickName,
+                        //     gender: res.userInfo.gender,
+                        //     avatarUrl: res.userInfo.avatarUrl,
+                        // }
+                        // httpRequest.requestGet('user/loginApp', data, function(data){
+                        //     debugger
+                        // })
 
                     }
                 })

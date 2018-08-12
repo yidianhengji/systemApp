@@ -2,7 +2,7 @@ var httpRequest = require('../../utils/request.js');
 
 Page({
     data: {
-        role: '',
+        role: '1',
         btnAreaData: [
             { 'name': '积分码', 'imgurl': '../image/icon/icon1.png', 'path': '../indexCode/indexCode'},
             { 'name': '扫一扫', 'imgurl': '../image/icon/icon2.png', 'path': 'saoyisao' },
@@ -13,15 +13,12 @@ Page({
             { 'name': '消息中心', 'imgurl': '../image/icon/icon7.png', 'path': '../indexNews/indexNews' },
             { 'name': '奖品兑换', 'imgurl': '../image/icon/icon8.png', 'path': '../indexExchange/indexExchange' },
         ],
-        imgUrls: [
-            'http://img02.tooopen.com/images/20150928/tooopen_sy_143912755726.jpg',
-            'http://img06.tooopen.com/images/20160818/tooopen_sy_175866434296.jpg',
-            'http://img06.tooopen.com/images/20160818/tooopen_sy_175833047715.jpg'
-        ],
         autoplay: false,
         interval: 5000,
         duration: 1000,
-        show: ""
+        show: "",
+        queryAct: [],
+        queryTasks: [],
     },
     onLoad: function (options) {
         //给角色赋
@@ -31,9 +28,24 @@ Page({
         })
         
         //查询活动列表
-        
+        this.quertActiveQuery();
         //查询任务列表
         this.quertTaskQuery();
+    },
+    //查询活动列表
+    quertActiveQuery() {
+        var params = {
+            pageSize: 3,
+            pageNum: 1,
+        }
+        var _this = this;
+        httpRequest.request('app/queryAct', params, function (data) {
+            if (data.code == 200) {
+                _this.setData({
+                    queryAct: data.data.list
+                })
+            }
+        })
     },
     //查询任务列表
     quertTaskQuery(){
@@ -41,9 +53,26 @@ Page({
             pageSize: 3,
             pageNum: 1,
         }
-        httpRequest.request('task/query', params, function (data) {
-            debugger
+        var _this = this;
+        httpRequest.request('app/queryTasks', params, function (data) {
+            if(data.code==200){
+                _this.setData({
+                    queryTasks: data.data.list
+                })
+            }
         })
+    },
+    //活动，任务详情跳转
+    clickViewPage(event) {
+        if (event.currentTarget.dataset.itemType==1){
+            wx.navigateTo({
+                url: '../indexActivityView/indexActivityView?uuid=' + event.currentTarget.dataset.itemUuid + ''
+            })
+        } else if (event.currentTarget.dataset.itemType == 2){
+            wx.navigateTo({
+                url: '../indexTaskView/indexTaskView?uuid=' + event.currentTarget.dataset.itemUuid + ''
+            })
+        }
     },
     clickIndexView(event){
         /*

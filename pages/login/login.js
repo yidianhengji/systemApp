@@ -1,24 +1,17 @@
+var app = getApp();
 Page({
     data: {
         canIUse: wx.canIUse('button.open-type.getUserInfo')
     },
-    onLoad: function () {
-        // 查看是否授权
+    onAuth() {
         wx.getSetting({
-            success: function (res) {
-                wx.getUserInfo({
-                    success: function (res) {
-                        wx.navigateTo({
-                            url: '../indexHome/indexHome'
-                        })
-                    }
-                })
+            success: (res) => {
+                if (res.authSetting['scope.userInfo']) {
+                    wx.reLaunch({
+                        url: '../indexHome/indexHome',
+                    })
+                }
             }
-        })
-    },
-    bindGetUserInfo: function (e) {
-        wx.navigateTo({
-            url: '../indexHome/indexHome'
         })
     }
 })

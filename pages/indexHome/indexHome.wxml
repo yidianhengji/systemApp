@@ -49,26 +49,25 @@
             <view class="swiperList">
             <!-- circular="true" -->
                 <swiper previous-margin="60rpx" next-margin="60rpx" current="1" circular="true" style="width: 100%; height: 100%;">
-                    <block wx:for="{{imgUrls}}" wx:for-item="item" wx:index="index">
-                        <swiper-item class="swiper-item">
-                            <view class="swiperImgBox">
-                                <view class="swiperImgBoxPdd">
-                                    <image class="bg" src="{{item}}" />
-                                    <text class="title">活动名称</text>
-                                    <view class="tip">
-                                        <view class="name">
-                                            <image src="../image/userName.png"></image>
-                                            <text>张三</text>
-                                        </view>
-                                        <view class="view">
-                                            <image src="../image/userView.png"></image>
-                                            <text>1511</text>
-                                        </view>
+                    <swiper-item class="swiper-item" wx:for="{{queryAct}}" bindtap="clickViewPage" wx:for-item="item" wx:index="index" data-item-uuid="{{item.uuid}}" data-item-type="1">
+                        <view class="swiperImgBox">
+                            <view class="swiperImgBoxPdd">
+                                <image wx:if="{{item.coverpic==''}}" class="bg" src="http://img02.tooopen.com/images/20150928/tooopen_sy_143912755726.jpg" />
+                                <image wx:else class="bg" src="{{item.coverpic}}" />
+                                <text class="title">{{item.name}}</text>
+                                <view class="tip">
+                                    <view class="name">
+                                        <image src="../image/userName.png"></image>
+                                        <text>{{item.createName}}</text>
+                                    </view>
+                                    <view class="view">
+                                        <image src="../image/userView.png"></image>
+                                        <text>0</text>
                                     </view>
                                 </view>
                             </view>
-                        </swiper-item>
-                    </block>
+                        </view>
+                    </swiper-item>
                 </swiper>
             </view>
         </view>
@@ -80,45 +79,18 @@
             <text>任务列表</text>
         </view>
         <view class="box-body">
-            <view class="blockList">
-                <image class="bg" src="http://img02.tooopen.com/images/20150928/tooopen_sy_143912755726.jpg"></image>
-                <text class="title">活动名称</text>
+            <view class="blockList" wx:for="{{queryTasks}}" bindtap="clickViewPage" wx:key="index" wx:for-item="item" data-item-uuid="{{item.uuid}}" data-item-type="2">
+                <image wx:if="{{item.coverpic==''}}" class="bg" src="http://img02.tooopen.com/images/20150928/tooopen_sy_143912755726.jpg"></image>
+                <image wx:else class="bg" src="{{item.coverpic}}"></image>
+                <text class="title">{{item.name}}</text>
                 <view class="tip">
                     <view class="name">
                         <image src="../image/userName.png"></image>
-                        <text>张三</text>
+                        <text>{{item.createName}}</text>
                     </view>
                     <view class="view">
                         <image src="../image/userView.png"></image>
-                        <text>1511</text>
-                    </view>
-                </view>
-            </view>
-            <view class="blockList">
-                <image class="bg" src="http://img02.tooopen.com/images/20150928/tooopen_sy_143912755726.jpg"></image>
-                <text class="title">活动名称</text>
-                <view class="tip">
-                    <view class="name">
-                        <image src="../image/userName.png"></image>
-                        <text>张三</text>
-                    </view>
-                    <view class="view">
-                        <image src="../image/userView.png"></image>
-                        <text>1511</text>
-                    </view>
-                </view>
-            </view>
-            <view class="blockList">
-                <image class="bg" src="http://img02.tooopen.com/images/20150928/tooopen_sy_143912755726.jpg"></image>
-                <text class="title">活动名称</text>
-                <view class="tip">
-                    <view class="name">
-                        <image src="../image/userName.png"></image>
-                        <text>张三</text>
-                    </view>
-                    <view class="view">
-                        <image src="../image/userView.png"></image>
-                        <text>1511</text>
+                        <text>0</text>
                     </view>
                 </view>
             </view>

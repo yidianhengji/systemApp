@@ -1,30 +1,43 @@
 <view class="__indexTaskView">
     <view class="imgBg">
-        <image src="../image/banner2.png"></image>
+        <image wx:if="{{queryOne.coverpic==''}}" src="http://img02.tooopen.com/images/20150928/tooopen_sy_143912755726.jpg" />
+        <image wx:else src="{{queryOne.coverpic}}" />
         <view>
-            <text>距结束仅剩 10 天 02 时 15 分 06 秒</text>
-            <text>报名时间</text>
+            <text>
+                <text wx:if="{{queryOne.flag==1}}">未开始</text>
+                <text wx:elif="{{queryOne.flag==2}}">进行中</text>
+                <text wx:else>已结束</text>
+            </text>
+            <text>任务状态</text>
         </view>
     </view>
     <view class="listText">
         <view class="name">
-            关爱流浪小动物关爱流浪小动物关爱流浪小动物关爱流浪小动物。
+            {{queryOne.name}}
+        </view>
+        <view class="text">
+            <text>任务积分</text>
+            <text>{{queryOne.integral}}</text>
         </view>
         <view class="text">
             <text>创建人</text>
-            <text>张三</text>
+            <text>{{queryOne.createName}}</text>
         </view>
         <view class="text">
-            <text>时间</text>
-            <text>2018-08-01 10:00:00</text>
+            <text>任务开始时间</text>
+            <text>{{queryOne.startTime}}</text>
         </view>
         <view class="text">
-            <text>电话</text>
-            <text>18581351548</text>
+            <text>任务开始时间</text>
+            <text>{{queryOne.endTime}}</text>
         </view>
         <view class="text">
             <text>报名总数</text>
-            <text>20人</text>
+            <text>{{queryOne.limitPeople}}</text>
+        </view>
+        <view class="text">
+            <text>地址</text>
+            <text>{{queryOne.location}}</text>
         </view>
     </view>
     <view class="listBox">
@@ -33,7 +46,7 @@
         </view>
         <view class="listBox-body">
             <view class="text">
-                环保志愿者协会的工作目标是整合社会各界力量积极参与环保公益事业，在环保宣传、公益活动、生态实践等方面发挥生力军作用，着力打造常态化、有影响的环保志愿服务品牌，建设一支有责任感、有奉献精神、有专业技能的环保志愿者队伍，为环保事业提供可持续的环保志愿服务。
+                {{queryOne.description}}
             </view>
         </view>
     </view>
@@ -42,14 +55,18 @@
             <text>报名居民</text>
         </view>
         <view class="listBox-body">
-            <view class="userInfo" wx:for="123465643515">
-                <image src="https://wx.qlogo.cn/mmopen/vi_32/pbjIJqM0Sxv6iaIXmrrqb8saO0weAVqaBhC2u68tmNNxJ7BGGsebVeQgKye8b37ykXFdauXic7TST7QsJEuYicsng/132"></image>
-                <text>李*菲</text>
+            <view style="font-size: 24rpx;" wx:if="{{queryTaskPeople.length==0}}">暂无</view>
+            <view wx:else>
+                <view class="userInfo" wx:for="{{queryTaskPeople}}">
+                    <image src="{{item.headPic}}"></image>
+                    <text>{{item.nickname}}</text>
+                </view>
             </view>
         </view>
     </view>
-    <view style="padding-bottom: 120rpx;"></view>
-    <view class="btnBox">
-        <text bindtap="clickAddBtn">立即报名</text>
+    <view wx:if="{{queryOne.flag==1}}" style="padding-bottom: 120rpx;"></view>
+    <view class="btnBox" wx:if="{{queryOne.flag==1}}">
+        <text bindtap="clickAddBtn" wx:if="{{queryOne.is_join_task==false}}">立即报名</text>
+        <text wx:else>已报名</text>
     </view>
 </view>

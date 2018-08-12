@@ -45,3 +45,7 @@
 .text-gerrn {
     color: #27ccaa !important;
 }
+
+.text-gray {
+    color: #666 !important;
+}

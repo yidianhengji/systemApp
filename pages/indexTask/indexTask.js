@@ -1,18 +1,31 @@
-// pages/indexTask/indexTask.js
-Page({
+var httpRequest = require('../../utils/request.js');
 
-    /**
-     * 页面的初始数据
-     */
+Page({
     data: {
         currentTab: 0,
-        windowHeight:　''
+        windowHeight:　'',
+        queryTasks: []
     },
-    
     //跳转详情
     clickViewPage(event) {
         wx.navigateTo({
             url: '../indexTaskView/indexTaskView?uuid=' + event.currentTarget.dataset.itemUuid + ''
+        })
+    },
+    //查询任务列表
+    quertTaskQuery(flag) {
+        var params = {
+            pageSize: 3,
+            pageNum: 1,
+            flag: flag
+        }
+        var _this = this;
+        httpRequest.request('app/queryTasks', params, function (data) {
+            if (data.code == 200) {
+                _this.setData({
+                    queryTasks: data.data.list
+                })
+            }
         })
     },
 
@@ -29,11 +42,19 @@ Page({
                 });
             }
         })
+        that.quertTaskQuery(1);
     },
 
     swichNav: function (e) {
-        console.log(e);
         var that = this;
+        if (e.target.dataset.current==0){
+            that.quertTaskQuery(1);
+        } else if (e.target.dataset.current == 1){
+            that.quertTaskQuery(2);
+        } else if (e.target.dataset.current == 2) {
+            that.quertTaskQuery(3);
+        }
+        
         if (this.data.currentTab === e.target.dataset.current) {
             return false;
         } else {
@@ -46,7 +67,6 @@ Page({
      * 导航页面显示2）
      */
     swiperChange: function (e) {
-        console.log(e);
         this.setData({
             currentTab: e.detail.current,
         })

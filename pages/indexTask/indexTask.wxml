@@ -5,48 +5,19 @@
         <view class="tab-item {{currentTab==2 ? 'active' : ''}}" data-current="2" bindtap="swichNav">已结束</view>
     </view>
     <!--内容主体-->
-    <swiper class="swiper" style="height:{{[windowHeight]}}px;" current="{{currentTab}}" duration="200" bindchange="swiperChange">
-        <swiper-item>
-            <view class="blockList" wx:for="123213" data-item-uuid="123" bindtap="clickViewPage">
-                <image class="bg" src="http://img02.tooopen.com/images/20150928/tooopen_sy_143912755726.jpg"></image>
-                <text class="title">活动名称</text>
-                <view class="time">
-                    <image src="../image/time.png"></image>
-                    <text>张三</text>
-                </view>
-                <view class="place">
-                    <image src="../image/place.png"></image>
-                    <text>1511</text>
-                </view>
+    <view class="swiper" style="height:{{[windowHeight]}}px;" current="{{currentTab}}" duration="200" bindchange="swiperChange">
+        <view class="blockList" wx:for="{{queryTasks}}" wx:for-item="item" wx:index="index" data-item-uuid="{{item.uuid}}" bindtap="clickViewPage">
+            <image wx:if="{{item.coverpic==''}}" class="bg" src="http://img02.tooopen.com/images/20150928/tooopen_sy_143912755726.jpg"></image>
+            <image wx:else class="bg" src="{{item.coverpic}}"></image>
+            <text class="title">{{item.name}}</text>
+            <view class="time">
+                <image src="../image/time.png"></image>
+                <text>{{item.createName}}</text>
             </view>
-        </swiper-item>
-        <swiper-item>
-            <view class="blockList" data-item-uuid="123" bindtap="clickViewPage">
-                <image class="bg" src="http://img02.tooopen.com/images/20150928/tooopen_sy_143912755726.jpg"></image>
-                <text class="title">活动名称</text>
-                <view class="time">
-                    <image src="../image/time.png"></image>
-                    <text>张三</text>
-                </view>
-                <view class="place">
-                    <image src="../image/place.png"></image>
-                    <text>1511</text>
-                </view>
+            <view class="place">
+                <image src="../image/place.png"></image>
+                <text>{{item.location}}</text>
             </view>
-        </swiper-item>
-        <swiper-item>
-            <view class="blockList" data-item-uuid="123" bindtap="clickViewPage">
-                <image class="bg" src="http://img02.tooopen.com/images/20150928/tooopen_sy_143912755726.jpg"></image>
-                <text class="title">活动名称</text>
-                <view class="time">
-                    <image src="../image/time.png"></image>
-                    <text>张三</text>
-                </view>
-                <view class="place">
-                    <image src="../image/place.png"></image>
-                    <text>1511</text>
-                </view>
-            </view>
-        </swiper-item>
-    </swiper>
+        </view>
+    </view>
 </view>

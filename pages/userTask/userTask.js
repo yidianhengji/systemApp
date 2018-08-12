@@ -1,11 +1,11 @@
-// pages/indexTask/indexTask.js
+var httpRequest = require('../../utils/request.js');
 Page({
 
     /**
      * 页面的初始数据
      */
     data: {
-        
+        queryTasks: []
     },
 
     //跳转详情
@@ -14,12 +14,26 @@ Page({
             url: '../indexTaskView/indexTaskView?uuid=' + event.currentTarget.dataset.itemUuid + ''
         })
     },
-
+    //查询我的任务列表
+    quertTaskQuery() {
+        var params = {
+            pageSize: 3,
+            pageNum: 1,
+        }
+        var _this = this;
+        httpRequest.request('app/queryMyTasks', params, function (data) {
+            if (data.code == 200) {
+                _this.setData({
+                    queryTasks: data.data.list
+                })
+            }
+        })
+    },
     /**
      * 生命周期函数--监听页面初次渲染完成
      */
     onReady: function () {
-
+        this.quertTaskQuery();
     },
 
     /**

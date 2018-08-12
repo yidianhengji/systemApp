@@ -1,6 +1,6 @@
 {
     "pages": [
-        
+        "pages/login/login",
         "pages/indexHome/indexHome",
         "pages/indexUser/indexUser",
         "pages/indexCode/indexCode",
@@ -19,9 +19,9 @@
         "pages/userActivity/userActivity",
         "pages/userTask/userTask",
         "pages/index/index",
-        "pages/logs/logs",
+        "pages/logs/logs"
 
-        "pages/login/login"
+        
     ],
     "window": {
         "backgroundTextStyle": "#fff",

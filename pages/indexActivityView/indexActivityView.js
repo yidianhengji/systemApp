@@ -37,7 +37,7 @@ Page({
     //查询报名居民
     queryTaskPeoplePost(uuid) {
         var _this = this;
-        httpRequest.request('app/queryActPeople', { actId: uuid }, function (data) {
+        httpRequest.request('app/queryActPeople', { activityId: uuid }, function (data) {
             if (data.code == 200) {
                 _this.setData({
                     queryTaskPeople: data.data.list

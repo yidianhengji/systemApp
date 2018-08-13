@@ -66,7 +66,7 @@
     </view>
     <view wx:if="{{queryOne.flag==1}}" style="padding-bottom: 120rpx;"></view>
     <view class="btnBox" wx:if="{{queryOne.flag==1}}">
-        <text bindtap="clickAddBtn" wx:if="{{queryOne.is_join_task==false}}">立即报名</text>
+        <text bindtap="clickAddBtn" wx:if="{{queryOne.is_join_act==false}}">立即报名</text>
         <text wx:else>已报名</text>
     </view>
 </view>

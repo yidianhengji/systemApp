@@ -55,17 +55,17 @@ Page({
                 });
             }
         })
-        that.quertTaskQuery(1);
+        that.quertTaskQuery(3);
     },
 
     swichNav: function (e) {
         var that = this;
         if (e.target.dataset.current == 0) {
-            that.quertTaskQuery(1);
-        } else if (e.target.dataset.current == 1) {
-            that.quertTaskQuery(2);
-        } else if (e.target.dataset.current == 2) {
             that.quertTaskQuery(3);
+        } else if (e.target.dataset.current == 1) {
+            that.quertTaskQuery(4);
+        } else if (e.target.dataset.current == 2) {
+            that.quertTaskQuery(5);
         }
 
         var that = this;

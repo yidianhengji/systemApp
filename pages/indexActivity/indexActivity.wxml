@@ -17,7 +17,7 @@
             <view class="place">
                 <image src="../image/place.png"></image>
                 <text>{{item.location}}</text>
-                <text class="btnBox" data-item-uuid="123" bindtap="clickViewPageExchange">积分派发</text>
+                <text wx:if="{{item.flag=='5'}}" class="btnBox" data-item-uuid="123" bindtap="clickViewPageExchange">积分派发</text>
             </view>
         </view>
     </view>

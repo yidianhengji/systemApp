@@ -10,7 +10,7 @@
             <image src="../image/icon/icon1.png"></image>
             <text>积分码</text>
         </view>
-        <view wx-if="{{role!=''}}" class="iconList" bindtap="clickIndexView" data-item-path="saoyisao" data-item-title="扫一扫">
+        <view wx-if="{{role=='2'}}" class="iconList" bindtap="clickIndexView" data-item-path="saoyisao" data-item-title="扫一扫">
             <image src="../image/icon/icon2.png"></image>
             <text>扫一扫</text>
         </view>
@@ -26,14 +26,14 @@
             <image src="../image/icon/icon5.png"></image>
             <text>活动中心</text>
         </view>
-        <view class="iconList" bindtap="clickIndexView" data-item-path="../indexTop/indexTop" data-item-title="积分排行">
+        <!-- <view class="iconList" bindtap="clickIndexView" data-item-path="../indexTop/indexTop" data-item-title="积分排行">
             <image src="../image/icon/icon6.png"></image>
             <text>积分排行</text>
         </view>
         <view class="iconList" bindtap="clickIndexView" data-item-path="../indexNews/indexNews" data-item-title="消息中心">
             <image src="../image/icon/icon7.png"></image>
             <text>消息中心</text>
-        </view>
+        </view> -->
         <view class="iconList" bindtap="clickIndexView" data-item-path="../indexExchange/indexExchange" data-item-title="奖品兑换">
             <image src="../image/icon/icon8.png"></image>
             <text>奖品兑换</text>

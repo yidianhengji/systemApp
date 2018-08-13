@@ -23,12 +23,13 @@
     color: #fff;
 }
 
-.imgBg > view text:nth-child(1) {
+.imgBg > view > text:nth-child(1) {
     font-size: 22rpx;
-    float: right
+    float: right;
+    margin-right: 40rpx;
 }
 
-.imgBg > view text:nth-child(2) {
+.imgBg > view > text:nth-child(2) {
     font-size: 24rpx;
     float: left;
 }
@@ -59,14 +60,14 @@
     line-height: 70rpx;
 }
 
-.listText > view text:nth-child(1) {
+.listText > view > text:nth-child(1) {
     color: #333333;
     font-size: 28rpx;
     float: left;
     font-weight: 600;
 }
 
-.listText > view text:nth-child(2) {
+.listText > view > text:nth-child(2) {
     color: #666666;
     font-size: 24rpx;
     float: right;

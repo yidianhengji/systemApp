@@ -1,32 +1,73 @@
-// pages/indexTaskView/indexTaskView.js
+var httpRequest = require('../../utils/request.js');
+
 Page({
-
-    /**
-     * 页面的初始数据
-     */
     data: {
-
+        queryOne: [],
+        uuid: '',
+        queryTaskPeople: []
     },
     //弹窗
     clickAddBtn() {
+        var that = this;
         wx.showModal({
             title: '温馨提示',
             content: '是否报名参加该活动？',
             success: function (res) {
                 if (res.confirm) {
-                    console.log('用户点击确定')
+                    that.joinTaskGet(that.data.uuid);
+                    that.queryOneGet(that.data.uuid);
+                    that.queryTaskPeoplePost(that.data.uuid);
                 } else if (res.cancel) {
                     console.log('用户点击取消')
                 }
             }
         })
     },
-
+    //查询单个任务
+    queryOneGet(uuid) {
+        var _this = this;
+        httpRequest.request('app/queryOneActs', { uuid: uuid }, function (data) {
+            if (data.code == 200) {
+                _this.setData({
+                    queryOne: data.data
+                })
+            }
+        })
+    },
+    //查询报名居民
+    queryTaskPeoplePost(uuid) {
+        var _this = this;
+        httpRequest.request('app/queryActPeople', { actId: uuid }, function (data) {
+            if (data.code == 200) {
+                _this.setData({
+                    queryTaskPeople: data.data.list
+                })
+            }
+        })
+    },
+    //立即报名
+    joinTaskGet(uuid) {
+        var _this = this;
+        httpRequest.requestGetData('app/joinAct?actId=' + uuid + '', '', function (data) {
+            if (data.code == 200) {
+                wx.showToast({
+                    title: '报名成功！',
+                    icon: 'succes',
+                    duration: 1000,
+                    mask: true
+                })
+            }
+        })
+    },
     /**
      * 生命周期函数--监听页面加载
      */
     onLoad: function (options) {
-
+        this.setData({
+            uuid: options.uuid
+        })
+        this.queryOneGet(options.uuid);
+        this.queryTaskPeoplePost(options.uuid);
     },
 
     /**

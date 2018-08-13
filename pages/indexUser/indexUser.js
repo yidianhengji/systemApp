@@ -12,8 +12,8 @@ Page({
         dataList1: [
             { name: '我的活动', icon: '1', path: '../userActivity/userActivity' },
             { name: '我的任务', icon: '6', path: '../userTask/userTask' },
-            { name: '积分排行', icon: '3', path: '../indexTop/indexTop' },
-            { name: '我的消息', icon: '5', path: '../userNews/userNews' },
+            //{ name: '积分排行', icon: '3', path: '../indexTop/indexTop' },
+            //{ name: '我的消息', icon: '5', path: '../userNews/userNews' },
             { name: '兑换记录', icon: '5', path: '../userExchange/userExchange' },
         ],
     },

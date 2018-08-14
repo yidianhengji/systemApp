@@ -1,13 +1,28 @@
-// pages/indexExchange/indexExchange.js
+var httpRequest = require('../../utils/request.js');
+
 Page({
 
     /**
      * 页面的初始数据
      */
     data: {
-
+        queryAct: []
     },
-
+    //查询活动列表
+    quertActiveQuery() {
+        var app = getApp();
+        var params = {
+            communityId: app.globalData.communityId
+        }
+        var _this = this;
+        httpRequest.request('shop/queryList', params, function (data) {
+            if (data.code == 200) {
+                _this.setData({
+                    queryAct: data.data.list
+                })
+            }
+        })
+    },
     //兑换弹窗
     exchangeBtn(event){
         console.log(event.currentTarget.dataset.itemUuid)
@@ -28,7 +43,7 @@ Page({
      * 生命周期函数--监听页面加载
      */
     onLoad: function (options) {
-
+        this.quertActiveQuery();
     },
 
     /**

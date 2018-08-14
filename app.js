@@ -34,6 +34,8 @@ App({
                                 app.globalData.isRealName = data.data.isRealName
                                 app.globalData.role = data.data.role
                                 app.globalData.sessionId = data.data.sessionId
+                                app.globalData.communityId = data.data.communityId
+                                app.globalData.userUuid = data.data.uuid
                                 if (data.data.isRealName == "2") {
                                     wx.showModal({
                                         title: '温馨提示',
@@ -61,10 +63,12 @@ App({
     },
     globalData: {
         userInfo: null,
-        //path: 'http://192.168.199.231:8090/backen/',
-        path: 'http://120.79.177.219:8090/backen/',
+        path: 'http://192.168.199.231:8090/backen/',
+        //path: 'http://120.79.177.219:8090/backen/',
         isRealName: '', //实名认证
         role: '', //角色身份
         sessionId: '', //用户信息
+        communityId: '',
+        userUuid: ''
     },
 })

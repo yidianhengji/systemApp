@@ -21,3 +21,10 @@ page {
     white-space: nowrap;
     text-overflow: ellipsis;
 }
+
+.pageTextCon {
+    color: #666;
+    text-align: center;
+    padding-top: 20rpx;
+    font-size: 30rpx;
+}

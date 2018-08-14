@@ -1,67 +1,16 @@
 <view class="__indexExchange">
-    <view class="list">
-        <image src="../image/listBg1.png"></image>
-        <view class="listText">
-            <view class="title text-ov">东北大米 农家新米2.5KGG/袋</view>
-            <view class="tip">
-                <text class="money">￥1500</text>
-                <text class="rest">剩余：50</text>
-                <text class="listBtn" data-item-uuid="1" bindtap="exchangeBtn">兑换</text>
-            </view>
-        </view>
-    </view>
-    <view class="list">
-        <image src="../image/listBg1.png"></image>
-        <view class="listText">
-            <view class="title text-ov">东北大米 农家新米2.5KGG/袋</view>
-            <view class="tip">
-                <text class="money">￥1500</text>
-                <text class="rest">剩余：50</text>
-                <text class="listBtn" data-item-uuid="2" bindtap="exchangeBtn">兑换</text>
-            </view>
-        </view>
-    </view>
-    <view class="list">
-        <image src="../image/listBg1.png"></image>
-        <view class="listText">
-            <view class="title text-ov">东北大米 农家新米2.5KGG/袋</view>
-            <view class="tip">
-                <text class="money">￥1500</text>
-                <text class="rest">剩余：50</text>
-                <text class="listBtn" data-item-uuid="1" bindtap="exchangeBtn">兑换</text>
-            </view>
-        </view>
-    </view>
-    <view class="list">
-        <image src="../image/listBg1.png"></image>
-        <view class="listText">
-            <view class="title text-ov">东北大米 农家新米2.5KGG/袋</view>
-            <view class="tip">
-                <text class="money">￥1500</text>
-                <text class="rest">剩余：50</text>
-                <text class="listBtn" data-item-uuid="2" bindtap="exchangeBtn">兑换</text>
-            </view>
-        </view>
-    </view>
-    <view class="list">
-        <image src="../image/listBg1.png"></image>
-        <view class="listText">
-            <view class="title text-ov">东北大米 农家新米2.5KGG/袋</view>
-            <view class="tip">
-                <text class="money">￥1500</text>
-                <text class="rest">剩余：50</text>
-                <text class="listBtn" data-item-uuid="1" bindtap="exchangeBtn">兑换</text>
-            </view>
-        </view>
-    </view>
-    <view class="list">
-        <image src="../image/listBg1.png"></image>
-        <view class="listText">
-            <view class="title text-ov">东北大米 农家新米2.5KGG/袋</view>
-            <view class="tip">
-                <text class="money">￥1500</text>
-                <text class="rest">剩余：50</text>
-                <text class="listBtn" data-item-uuid="2" bindtap="exchangeBtn">兑换</text>
+    <view wx:if="{{queryAct.length==0}}" class="pageTextCon">暂无数据</view>
+    <view wx:else>
+        <view class="list" wx:for="{{queryAct}}" wx:for-item="item" wx:index="index">
+            <image wx:if="{{item.coverPic==''}}" src="{{item.coverPic}}"></image>
+            <image wx:else src="../image/default.png"></image>
+            <view class="listText">
+                <view class="title text-ov">{{item.name}}</view>
+                <view class="tip">
+                    <text class="money">￥{{item.integral}}</text>
+                    <text class="rest">剩余：{{item.store}}</text>
+                    <text class="listBtn" data-item-uuid="item.uuid" bindtap="exchangeBtn">兑换</text>
+                </view>
             </view>
         </view>
     </view>

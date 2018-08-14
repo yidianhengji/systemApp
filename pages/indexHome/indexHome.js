@@ -82,7 +82,7 @@ Page({
         var app = getApp();
         var title = event.currentTarget.dataset.itemTitle;
         if (app.globalData.isRealName==2){
-            if (title == '积分码' || title == '积分排行' || title == '消息中心' || title =='奖品兑换'){
+            if (title == '积分码' || title == '扫一扫' || title == '积分排行' || title == '消息中心' || title =='奖品兑换'){
                 wx.showModal({
                     title: '温馨提示',
                     content: '您还未实名认证！请先实名认证。',
@@ -107,6 +107,7 @@ Page({
                         onlyFromCamera: true,
                         success: (res) => {
                             console.log(res)
+                            console.log("1233")
                         }
                     })
                 } else {

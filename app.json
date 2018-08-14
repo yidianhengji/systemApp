@@ -1,5 +1,6 @@
 {
     "pages": [
+        "pages/indexGarbage/indexGarbage",
         "pages/login/login",
         "pages/indexHome/indexHome",
         "pages/indexUser/indexUser",
@@ -20,8 +21,6 @@
         "pages/userTask/userTask",
         "pages/index/index",
         "pages/logs/logs"
-
-        
     ],
     "window": {
         "backgroundTextStyle": "#fff",

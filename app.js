@@ -61,8 +61,8 @@ App({
     },
     globalData: {
         userInfo: null,
-        path: 'http://192.168.199.231:8090/backen/',
-        //path: 'http://120.79.177.219:8090/backen/',
+        //path: 'http://192.168.199.231:8090/backen/',
+        path: 'http://120.79.177.219:8090/backen/',
         isRealName: '', //实名认证
         role: '', //角色身份
         sessionId: '', //用户信息

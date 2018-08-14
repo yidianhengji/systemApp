@@ -52,7 +52,7 @@
                     <swiper-item class="swiper-item" wx:for="{{queryAct}}" bindtap="clickViewPage" wx:for-item="item" wx:index="index" data-item-uuid="{{item.uuid}}" data-item-type="1">
                         <view class="swiperImgBox">
                             <view class="swiperImgBoxPdd">
-                                <image wx:if="{{item.coverpic==''}}" class="bg" src="http://img02.tooopen.com/images/20150928/tooopen_sy_143912755726.jpg" />
+                                <image wx:if="{{item.coverpic==''}}" class="bg" src="../image/default.png" />
                                 <image wx:else class="bg" src="{{item.coverpic}}" />
                                 <text class="title">{{item.name}}</text>
                                 <view class="tip">
@@ -80,7 +80,7 @@
         </view>
         <view class="box-body">
             <view class="blockList" wx:for="{{queryTasks}}" bindtap="clickViewPage" wx:key="index" wx:for-item="item" data-item-uuid="{{item.uuid}}" data-item-type="2">
-                <image wx:if="{{item.coverpic==''}}" class="bg" src="http://img02.tooopen.com/images/20150928/tooopen_sy_143912755726.jpg"></image>
+                <image wx:if="{{item.coverpic==''}}" class="bg" src="../image/default.png"></image>
                 <image wx:else class="bg" src="{{item.coverpic}}"></image>
                 <text class="title">{{item.name}}</text>
                 <view class="tip">

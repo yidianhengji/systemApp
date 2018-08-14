@@ -15,7 +15,7 @@ Page({
     //查询任务列表
     quertTaskQuery(flag) {
         var params = {
-            pageSize: 3,
+            pageSize: 100,
             pageNum: 1,
             flag: flag
         }

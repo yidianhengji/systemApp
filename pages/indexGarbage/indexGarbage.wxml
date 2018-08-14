@@ -1,0 +1,26 @@
+<!--pages/indexGarbage/indexGarbage.wxml-->
+<view style="height: {{windowHeight}}px; width: 100%; overflow: hidden; position: relative;">
+    <image src="../image/garbage.jpg" style="width: 100%; height: 100%;"></image>
+    <view class="contern">
+        <view class="table">
+            <view class="tr">
+                <view class="th">垃圾分类</view>
+                <view class="th">重量(g)</view>
+                <view class="th">可换积分</view>
+            </view>
+            <view class="tr">
+                <view class="td">垃圾分类</view>
+                <view class="td">
+                    <view>200</view>
+                    <view>200</view>
+                </view>
+                <view class="td">
+                    <view>20</view>
+                    <view>20</view>
+                </view>
+            </view>
+        </view>
+
+    </view>
+    
+</view>

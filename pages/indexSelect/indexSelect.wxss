@@ -1,1 +1,35 @@
 /* pages/indexSelect/indexSelect.wxss */
+.__indexSelect {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    background: #fff;
+}
+
+.btnBoxlist {
+    position: absolute;
+    width: 340rpx;
+    height: 230rpx;
+    left: 50%;
+    top: 50%;
+    margin-top: -115rpx;
+    margin-left: -170rpx;
+    font-weight: 600;
+}
+
+.btnList {
+    display: block;
+    width: 100%;
+    height: 80rpx;
+    line-height: 80rpx;
+    text-align: center;
+    background: #27ccaa;
+    color: #fff;
+    font-size: 32rpx;
+    border-radius: 40rpx;
+    margin-bottom: 70rpx;
+}
+
+.btnList:last-child {
+    margin-bottom: 0px;
+}

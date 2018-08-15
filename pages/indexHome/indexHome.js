@@ -107,7 +107,9 @@ Page({
                         onlyFromCamera: true,
                         success: (res) => {
                             console.log(res)
-                            console.log("1233")
+                            wx.navigateTo({
+                                url: '../indexSelect/indexSelect?userUuid=' + res.result + ''
+                            })
                         }
                     })
                 } else {

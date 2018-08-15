@@ -1,16 +1,27 @@
-// pages/indexActivityIntegral/indexActivityIntegral.js
+var httpRequest = require('../../utils/request.js');
 Page({
 
     /**
      * 页面的初始数据
      */
     data: {
-
+        num: '',
+        uuid: '',
+        queryTaskPeople: []
     },
-
+    //查询报名居民
+    queryTaskPeoplePost(uuid) {
+        var _this = this;
+        httpRequest.request('app/queryActPeople', { activityId: uuid }, function (data) {
+            if (data.code == 200) {
+                _this.setData({
+                    queryTaskPeople: data.data.list
+                })
+            }
+        })
+    },
     //兑换弹窗
     exchangeBtn(event) {
-        console.log(event.currentTarget.dataset.itemUuid)
         wx.showModal({
             title: '温馨提示',
             content: '是否确认派发该活动积分？',
@@ -28,7 +39,11 @@ Page({
      * 生命周期函数--监听页面加载
      */
     onLoad: function (options) {
-
+        this.setData({
+            num: options.num,
+            uuid: options.uuid
+        });
+        this.queryTaskPeoplePost(options.uuid);
     },
 
     /**

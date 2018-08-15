@@ -21,7 +21,7 @@ Page({
     //积分派发
     clickViewPageExchange(event){
         wx.navigateTo({
-            url: '../indexActivityIntegral/indexActivityIntegral?uuid=' + event.currentTarget.dataset.itemUuid + ''
+            url: '../indexActivityIntegral/indexActivityIntegral?uuid=' + event.currentTarget.dataset.itemUuid + '&num=' + event.currentTarget.dataset.itemNum+''
         })
     },
 

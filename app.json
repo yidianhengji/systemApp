@@ -1,8 +1,8 @@
 {
     "pages": [
-        "pages/indexSelect/indexSelect",
         "pages/login/login",
         "pages/indexGarbage/indexGarbage",
+        "pages/indexSelect/indexSelect",
         "pages/indexHome/indexHome",
         "pages/indexUser/indexUser",
         "pages/indexCode/indexCode",

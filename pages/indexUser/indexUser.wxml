@@ -5,9 +5,8 @@
             <image src="../image/settingIcon.png"></image>
         </view>
         <view class="userPhotoBox">
-            {{userInfoList.userInfo}}
-            <image src="https://wx.qlogo.cn/mmopen/vi_32/pbjIJqM0Sxv6iaIXmrrqb8saO0weAVqaBhC2u68tmNNxJ7BGGsebVeQgKye8b37ykXFdauXic7TST7QsJEuYicsng/132"></image>
-            <text>张三</text>
+            <image src="{{userInfoList.headPic}}"></image>
+            <text>{{userInfoList.nickname}}</text>
         </view>
         <view class="tipListBox">
             <view>
@@ -16,7 +15,7 @@
                     <text>积分码</text>
                 </view>
                 <view>
-                    <text>0分</text>
+                    <text>{{userInfoList.integral}}分</text>
                     <text>我的积分</text>
                 </view>
                 <view>

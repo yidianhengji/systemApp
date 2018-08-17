@@ -19,6 +19,7 @@
 .tr {
     width: 100%;
     overflow: hidden;
+    display: table;
 }
 
 .th {
@@ -26,10 +27,11 @@
     font-size: 24rpx;
     font-weight: 600;
     padding: 10rpx 0;
-    float: left;
-    width: 33%;
     text-align: center;
-    display: inline-block;
+    border-bottom: 2px solid #27ccaa;
+    border-right: 2px solid #27ccaa;
+    display: table-cell;
+    width: 33%;
 }
 
 .td {
@@ -38,36 +40,32 @@
     color: #333333;
     font-size: 20rpx;
     display: table-cell;
-    float: left;
+    border-right: 2px solid #27ccaa;
+    border-bottom: 2px solid #27ccaa;
     width: 33%;
 }
 
-
-
-
-/* 
-.table {
-　　border: 1px solid #dadada;
-　　border-right: 0;
-　　border-bottom: 0;
-　　width: 98%;
+.td view {
+    padding: 8rpx 0;
+    border-bottom: 2px solid #27ccaa;
 }
 
-.tr {
-    　　width: 100%;
-    　　display: flex;
-    　　justify-content: space-between;
+.td view:last-child {
+    border: none;
 }
 
-.th, .td {
-    　　padding: 10px;
-    　　border-bottom: 1px solid #dadada;
-    　　border-right: 1px solid #dadada;
-    　　text-align: center;
-    　　width: 100%;
+
+.textBox {
+    margin-top: 10rpx;
 }
 
-.th {
-    　　font-weight: 400;
-    　　background-color: #dadada;
-} */
+.textBox view:nth-child(1) {
+    color: #27ccaa;
+    font-size: 24rpx;
+}
+
+.textBox view:nth-child(2) {
+    color: #333333;
+    font-size: 22rpx;
+    text-indent: 2em;
+}

@@ -1,20 +1,23 @@
 <view class="__indexTask">
-    <view class="blockList" wx:for="{{queryTasks}}" wx:for-item="item" wx:index="index" data-item-uuid="{{item.uuid}}" bindtap="clickViewPage">
-        <image wx:if="{{item.coverpic==''}}" class="bg" src="http://img02.tooopen.com/images/20150928/tooopen_sy_143912755726.jpg"></image>
-        <image wx:else class="bg" src="{{item.coverpic}}"></image>
-        <text class="title">{{item.name}}</text>
-        <view class="time">
-            <image src="../image/time.png"></image>
-            <text>{{item.startTime+' 至 '+item.endTime}}</text>
-        </view>
-        <view class="place">
-            <image src="../image/place.png"></image>
-            <text>{{item.location}}</text>
-            <text class="status">
-                <text wx:if="{{item.flag==1}}" class="text-gray">未开始</text>
-                <text wx:elif="{{item.flag==2}}" class="text-red">进行中</text>
-                <text wx:else class="text-gerrn">已结束</text>
-            </text>
+    <view wx:if="{{queryTasks.length==0}}" class="pageTextCon">暂无数据</view>
+    <view wx:else>
+        <view class="blockList" wx:for="{{queryTasks}}" wx:for-item="item" wx:index="index" data-item-uuid="{{item.uuid}}" bindtap="clickViewPage">
+            <image wx:if="{{item.coverpic==''}}" class="bg" src="http://img02.tooopen.com/images/20150928/tooopen_sy_143912755726.jpg"></image>
+            <image wx:else class="bg" src="{{item.coverpic}}"></image>
+            <text class="title">{{item.name}}</text>
+            <view class="time">
+                <image src="../image/time.png"></image>
+                <text>{{item.startTime+' 至 '+item.endTime}}</text>
+            </view>
+            <view class="place">
+                <image src="../image/place.png"></image>
+                <text>{{item.location}}</text>
+                <text class="status">
+                    <text wx:if="{{item.flag==1}}" class="text-gray">未开始</text>
+                    <text wx:elif="{{item.flag==2}}" class="text-red">进行中</text>
+                    <text wx:else class="text-gerrn">已结束</text>
+                </text>
+            </view>
         </view>
     </view>
 </view>

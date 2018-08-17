@@ -1,11 +1,12 @@
-// pages/indexGarbage/indexGarbage.js
+var httpRequest = require('../../utils/request.js');
 Page({
 
     /**
      * 页面的初始数据
      */
     data: {
-        windowHeight: ""
+        windowHeight: "",
+        dataList: []
     },
 
     /**
@@ -19,6 +20,21 @@ Page({
                     windowHeight: res.windowHeight
                     // canvasHidden:true
                 });
+            }
+        })
+        this.quertActiveQuery();
+    },
+
+    //查询
+    quertActiveQuery() {
+        var _this = this;
+        var app = getApp();
+        httpRequest.request('garbage/queryOne', { sysType: app.globalData.userInfoData.sysType}, function (data) {
+            if (data.code == 200) {
+                debugger
+                _this.setData({
+                    dataList: data.data
+                })
             }
         })
     },

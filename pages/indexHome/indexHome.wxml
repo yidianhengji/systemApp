@@ -14,7 +14,7 @@
             <image src="../image/icon/icon2.png"></image>
             <text>扫一扫</text>
         </view>
-        <view class="iconList" bindtap="clickIndexView" data-item-path="" data-item-title="垃圾分类">
+        <view class="iconList" bindtap="clickIndexView" data-item-path="../indexGarbage/indexGarbage" data-item-title="垃圾分类">
             <image src="../image/icon/icon3.png"></image>
             <text>垃圾分类</text>
         </view>
@@ -40,7 +40,7 @@
         </view>
     </view>
     
-    <view class="box">
+    <view class="box" wx:if="{{queryAct.length>0}}">
         <view class="box-head">
             <image src="../image/title.png"></image>
             <text>活动列表</text>
@@ -73,7 +73,7 @@
         </view>
     </view>
     
-    <view class="box">
+    <view class="box" wx:if="{{queryTasks.length>0}}">
         <view class="box-head">
             <image src="../image/title.png"></image>
             <text>任务列表</text>

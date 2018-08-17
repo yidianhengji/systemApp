@@ -1,14 +1,11 @@
 // pages/indexUser/indexUser.js
-const app = getApp();
-console.log(app)
-
 Page({
 
     /**
      * 页面的初始数据
      */
     data: {
-        userInfoList: app.globalData.userInfo,
+        userInfoList: '',
         dataList1: [
             { name: '我的活动', icon: '1', path: '../userActivity/userActivity' },
             { name: '我的任务', icon: '6', path: '../userTask/userTask' },
@@ -54,7 +51,10 @@ Page({
      * 生命周期函数--监听页面加载
      */
     onLoad: function (options) {
-
+        var app = getApp();
+        this.setData({
+            userInfoList: app.globalData.userInfoData
+        })
     },
 
     /**

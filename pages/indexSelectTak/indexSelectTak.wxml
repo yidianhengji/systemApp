@@ -1,0 +1,16 @@
+<view class="__indexExchange">
+    <view wx:if="{{queryAct.length==0}}" class="pageTextCon">暂无数据</view>
+    <view wx:else>
+        <view class="list" wx:for="{{queryAct}}" wx:for-item="item" wx:index="index" wx:if="{{item.distribute!=true}}">
+            <image wx:if="{{item.coverPic==''}}" src="{{item.coverPic}}"></image>
+            <image wx:else src="../image/default.png"></image>
+            <view class="listText">
+                <view class="title text-ov">{{item.name}}</view>
+                <view class="tip">
+                    <text class="money">积分：{{item.integral}}</text>
+                    <text class="listBtn" data-item-uuid="{{item.uuid}}" bindtap="exchangeBtn" data-item-name="{{item.name}}" data-item-integral="{{item.integral}}">派发</text>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>

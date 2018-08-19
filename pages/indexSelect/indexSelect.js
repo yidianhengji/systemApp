@@ -5,13 +5,19 @@ Page({
      * 页面的初始数据
      */
     data: {
-        windowHeight: ""
+        windowHeight: "",
+        userSelectUuid: ''
     },
 
     /**
      * 生命周期函数--监听页面加载
      */
     onLoad: function (options) {
+        
+        this.setData({
+            userSelectUuid: options.userUuid
+        });
+        console.log(this.data.userSelectUuid)
         var that = this;
         wx.getSystemInfo({
             success: function (res) {
@@ -20,6 +26,20 @@ Page({
                     // canvasHidden:true
                 });
             }
+        })
+    },
+
+    takClick(){
+        var that = this;
+        wx.navigateTo({
+            url: '../indexSelectTak/indexSelectTak?userSelectUuid=' + that.data.userSelectUuid + ''
+        })
+    },
+
+    garbageClick(){
+        var that = this;
+        wx.navigateTo({
+            url: '../indexSelectGarbage/indexSelectGarbage?userSelectUuid=' + that.data.userSelectUuid + ''
         })
     },
 

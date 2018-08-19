@@ -1,5 +1,6 @@
 .imgBg {
     position: relative;
+    overflow-x: hidden;
 }
 
 .imgBg image {

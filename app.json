@@ -3,7 +3,9 @@
         
         "pages/login/login",
         "pages/indexGarbage/indexGarbage",
+        "pages/indexSelectTak/indexSelectTak",
         "pages/indexSelect/indexSelect",
+        "pages/indexSelectGarbage/indexSelectGarbage",
         "pages/indexHome/indexHome",
         "pages/indexUser/indexUser",
         "pages/indexCode/indexCode",

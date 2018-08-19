@@ -6,7 +6,8 @@ Page({
      */
     data: {
         windowHeight: "",
-        dataList: []
+        description: [],
+        content: []
     },
 
     /**
@@ -29,11 +30,11 @@ Page({
     quertActiveQuery() {
         var _this = this;
         var app = getApp();
-        httpRequest.request('garbage/queryOne', { sysType: app.globalData.userInfoData.sysType}, function (data) {
+        httpRequest.requestGetData('garbage/queryOne?sysType=' + app.globalData.userInfoData.sysType+'', '', function (data) {
             if (data.code == 200) {
-                debugger
                 _this.setData({
-                    dataList: data.data
+                    description: data.data.description,
+                    content: JSON.parse(data.data.content)
                 })
             }
         })

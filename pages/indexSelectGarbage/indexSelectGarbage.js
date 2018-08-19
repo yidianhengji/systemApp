@@ -5,18 +5,19 @@ Page({
      * 页面的初始数据
      */
     data: {
-        num: '',
-        uuid: '',
-        title: '',
-        queryTaskPeople: []
+        description: [],
+        content: [],
+        userSelectUuid: ''
     },
-    //查询报名居民
-    queryTaskPeoplePost(uuid) {
+    //查询
+    quertActiveQuery() {
         var _this = this;
-        httpRequest.request('app/queryActPeople', { activityId: uuid }, function (data) {
+        var app = getApp();
+        httpRequest.requestGetData('garbage/queryOne?sysType=' + app.globalData.userInfoData.sysType + '', '', function (data) {
             if (data.code == 200) {
                 _this.setData({
-                    queryTaskPeople: data.data.list
+                    description: data.data.description,
+                    content: JSON.parse(data.data.content)
                 })
             }
         })
@@ -26,15 +27,13 @@ Page({
         var that = this;
         wx.showModal({
             title: '温馨提示',
-            content: '是否确认派发该活动积分？',
+            content: '是否确认派发该重量？',
             success: function (res) {
                 if (res.confirm) {
                     var datas = {
-                        type: 1, //类型
-                        foreignId: that.data.uuid, //任务记录id
-                        peopleId: event.currentTarget.dataset.itemName, //用户uuid
-                        foreignName: that.data.title, //任务名称
-                        integral: that.data.num, //积分
+                        type: 3, //类型
+                        peopleId: that.data.userSelectUuid, //用户uuid
+                        integral: event.currentTarget.dataset.itemIntegral, //积分
                     }
                     httpRequest.request('integral/distribute', datas, function (data) {
                         if (data.code == 200) {
@@ -44,7 +43,6 @@ Page({
                                 duration: 1000,
                                 mask: true
                             })
-                            that.queryTaskPeoplePost(that.data.uuid);
                         }
                     })
                 } else if (res.cancel) {
@@ -56,18 +54,13 @@ Page({
             }
         })
     },
-
-    /**
-     * 生命周期函数--监听页面加载
-     */
     onLoad: function (options) {
+        this.quertActiveQuery();
         this.setData({
-            num: options.num,
-            uuid: options.uuid,
-            title: options.title,
-        });
-        this.queryTaskPeoplePost(options.uuid);
+            userSelectUuid: options.userSelectUuid
+        })
     },
+    
 
     /**
      * 生命周期函数--监听页面初次渲染完成

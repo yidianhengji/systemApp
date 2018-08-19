@@ -1,7 +1,7 @@
 <view class="__indexTaskView">
     <view class="imgBg">
-        <image wx:if="{{queryOne.coverpic==''}}" src="http://img02.tooopen.com/images/20150928/tooopen_sy_143912755726.jpg" />
-        <image wx:else src="{{queryOne.coverpic}}" />
+        <image wx:if="{{queryOne.coverpicList.length==0}}" src="http://img02.tooopen.com/images/20150928/tooopen_sy_143912755726.jpg" />
+        <image wx:else src="{{queryOne.coverpicList[0]}}" />
         <view>
             <text>
                 <text wx:if="{{queryOne.flag==1}}">未开始</text>
@@ -59,7 +59,8 @@
             <view wx:else>
                 <view class="userInfo" wx:for="{{queryTaskPeople}}">
                     <image src="{{item.headPic}}"></image>
-                    <text>{{item.nickname}}</text>
+                    <text wx:if="{{item.truename==''}}">{{item.nickname}}</text>
+                    <text wx:else>{{item.truename}}</text>
                 </view>
             </view>
         </view>

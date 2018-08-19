@@ -1,4 +1,4 @@
-// pages/indexUser/indexUser.js
+var httpRequest = require('../../utils/request.js');
 Page({
 
     /**
@@ -6,6 +6,7 @@ Page({
      */
     data: {
         userInfoList: '',
+        peopleNum: '',
         dataList1: [
             { name: '我的活动', icon: '1', path: '../userActivity/userActivity' },
             { name: '我的任务', icon: '6', path: '../userTask/userTask' },
@@ -13,8 +14,21 @@ Page({
             //{ name: '我的消息', icon: '5', path: '../userNews/userNews' },
             { name: '兑换记录', icon: '5', path: '../userExchange/userExchange' },
         ],
+        
     },
-
+    //查询活动列表
+    quertActiveQuery() {
+        var _this = this;
+        var app = getApp();
+        var peopleId = app.globalData.userUuid
+        httpRequest.requestGetData('/people/queryIntegral?peopleId=' + peopleId+'', '', function (data) {
+            if (data.code == 200) {
+                _this.setData({
+                    peopleNum: data.data
+                })
+            }
+        })
+    },
     clickIndexView(event){
         var app = getApp();
         var title = event.currentTarget.dataset.itemTitle;
@@ -46,36 +60,15 @@ Page({
         }
         
     },
-    
-
-    // clickIndexJifen(){
-    //     wx.navigateTo({
-    //         url: '../ indexCode/indexCode'
-    //     })
-    // },
-    
-    /**
-     * 生命周期函数--监听页面加载
-     */
     onLoad: function (options) {
         var app = getApp();
         this.setData({
             userInfoList: app.globalData.userInfoData
         })
     },
-
-    /**
-     * 生命周期函数--监听页面初次渲染完成
-     */
-    onReady: function () {
-
-    },
-
-    /**
-     * 生命周期函数--监听页面显示
-     */
-    onShow: function () {
-
+    onShow: function (options) {
+        
+        this.quertActiveQuery();
     },
 
     /**

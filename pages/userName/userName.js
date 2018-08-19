@@ -29,10 +29,14 @@ Page({
             this.showModal(error)
             return false
         }else {
+            var that = this;
             httpRequest.request('people/verified', { mobile: params.phone }, function (data) {
                 if (data.code == 200) {
-                    this.showModal({
+                    that.showModal({
                         msg: '提交成功',
+                    })
+                    wx.reLaunch({
+                        url: '../login/login',
                     })
                 }
             })

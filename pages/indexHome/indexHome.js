@@ -1,5 +1,4 @@
 var httpRequest = require('../../utils/request.js');
-
 Page({
     data: {
         role: '1',
@@ -20,7 +19,12 @@ Page({
         queryAct: [],
         queryTasks: [],
     },
-    onLoad: function (options) {
+    test(str){
+        console.log(1)
+        debugger
+        return '123'
+    },
+    onShow: function (options) {
         //给角色赋
         var app = getApp();
         this.setData({

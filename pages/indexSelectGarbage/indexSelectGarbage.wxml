@@ -1,0 +1,42 @@
+<view class="conterns">
+    <view class="table">
+        <view class="tr">
+            <view class="th">垃圾分类</view>
+            <view class="th">重量(g)</view>
+            <view class="th">操作</view>
+        </view>
+        <view class="tr">
+            <view class="td title">可回收垃圾</view>
+            <view class="td">
+                <view wx:for="{{content.domains1}}">{{item.value}}g</view>
+            </view>
+            <view class="td">
+                <view wx:for="{{content.domains1}}">
+                    <text bindtap="exchangeBtn" data-item-integral="{{item.value1}}">派发</text>
+                </view>
+            </view>
+        </view>
+        <view class="tr">
+            <view class="td title">不可回收垃圾</view>
+            <view class="td">
+                <view wx:for="{{content.domains2}}">{{item.value}}g</view>
+            </view>
+            <view class="td">
+                <view wx:for="{{content.domains2}}">
+                    <text bindtap="exchangeBtn" data-item-integral="{{item.value1}}">派发</text>
+                </view>
+            </view>
+        </view>
+        <view class="tr">
+            <view class="td title">厨余垃圾</view>
+            <view class="td">
+                <view wx:for="{{content.domains3}}">{{item.value}}g</view>
+            </view>
+            <view class="td">
+                <view wx:for="{{content.domains3}}">
+                    <text bindtap="exchangeBtn" data-item-integral="{{item.value1}}">派发</text>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>

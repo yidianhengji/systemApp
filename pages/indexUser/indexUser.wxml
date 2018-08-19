@@ -6,16 +6,17 @@
         </view>
         <view class="userPhotoBox">
             <image src="{{userInfoList.headPic}}"></image>
-            <text>{{userInfoList.nickname}}</text>
+            <text wx:if="{{userInfoList.truename==null || userInfoList.truename==''}}">{{userInfoList.nickname}}</text>
+            <text wx:else>{{userInfoList.truename}}</text>
         </view>
         <view class="tipListBox">
             <view>
-                <view bindtap="clickIndexJifen" data-item-title="积分码">
+                <view bindtap="clickIndexView" data-item-path="../indexCode/indexCode" data-item-title="积分码">
                     <image src="../image/icon/user/icon1.png"></image>
                     <text>积分码</text>
                 </view>
                 <view>
-                    <text>{{userInfoList.integral}}分</text>
+                    <text>{{peopleNum}}分</text>
                     <text>我的积分</text>
                 </view>
                 <view>

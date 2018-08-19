@@ -9,54 +9,36 @@
                 <view class="th">可换积分</view>
             </view>
             <view class="tr">
-                <view class="td title">垃圾分类</view>
+                <view class="td title">可回收垃圾</view>
                 <view class="td">
-                    <view>200</view>
-                    <view>200</view>
-                    <view>200</view>
-                    <view>200</view>
+                    <view wx:for="{{content.domains1}}">{{item.value}}g</view>
                 </view>
                 <view class="td">
-                    <view>20</view>
-                    <view>20</view>
-                    <view>20</view>
-                    <view>20</view>
+                    <view wx:for="{{content.domains1}}">{{item.value1}}分</view>
                 </view>
             </view>
             <view class="tr">
-                <view class="td title">垃圾分类</view>
+                <view class="td title">不可回收垃圾</view>
                 <view class="td">
-                    <view>200</view>
-                    <view>200</view>
-                    <view>200</view>
-                    <view>200</view>
+                    <view wx:for="{{content.domains2}}">{{item.value}}g</view>
                 </view>
                 <view class="td">
-                    <view>20</view>
-                    <view>20</view>
-                    <view>20</view>
-                    <view>20</view>
+                    <view wx:for="{{content.domains2}}">{{item.value1}}分</view>
                 </view>
             </view>
             <view class="tr">
-                <view class="td title">垃圾分类</view>
+                <view class="td title">厨余垃圾</view>
                 <view class="td">
-                    <view>200</view>
-                    <view>200</view>
-                    <view>200</view>
-                    <view>200</view>
+                    <view wx:for="{{content.domains3}}">{{item.value}}g</view>
                 </view>
                 <view class="td">
-                    <view>20</view>
-                    <view>20</view>
-                    <view>20</view>
-                    <view>20</view>
+                    <view wx:for="{{content.domains3}}">{{item.value1}}分</view>
                 </view>
             </view>
         </view>
         <view class="textBox">
             <view>兑换规则描述</view>
-            <view>长沙市地貌总的特征是：地势起伏较大，地貌类型多样，地表水系发育。长沙市东北是幕阜～罗霄山系的北段，西北是雪峰山余脉的东缘，中部是长衡丘陵盆地向洞庭湖平原过渡地带。东北、西北两端山地环绕，地势相对高峻，中部递降趋于平缓，略似马鞍形，湘江由南而北斜贯中部，南部丘岗起伏，北部平坦开阔，地势由南向北倾斜，形如一个向北开口的漏斗。城内为多级阶地组成的坡度较缓的平岗地带，湘江中的橘子洲长5公里。 [36] 长沙市东有连云山、大围山、九岭山等呈东北～西南走向作雁行状排列，峡谷平行相间，海拔800米以上山峰有50多座，最高峰七星岭海拔1607.9米。长沙西有海拔800米以上的山峰13座，望城区乔口湛湖的海拔23.5米，为长沙市最低点；最高点与最低点相差1584.4米。在平岗区有孤峰高耸，与周围平地显现较大的高低差异。 [36] </view>
+            <view>{{description}}</view>
         </view>
     </view>
     

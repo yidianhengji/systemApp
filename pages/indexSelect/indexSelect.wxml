@@ -1,6 +1,6 @@
 <view class="__indexSelect" style="height: {{windowHeight}}px;">
     <view class="btnBoxlist">
-        <text class="btnList">任务积分派发</text>
-        <text class="btnList">垃圾分类积分派发</text>
+        <text class="btnList" bindtap="takClick">任务积分派发</text>
+        <text class="btnList" bindtap="garbageClick">垃圾分类积分派发</text>
     </view>
 </view>

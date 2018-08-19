@@ -9,8 +9,8 @@
         <view wx:if="{{queryTasks.length==0}}" class="pageTextCon">暂无数据</view>
         <view wx:else>
             <view class="blockList" wx:for="{{queryTasks}}" wx:for-item="item" wx:index="index">
-                <image wx:if="{{item.coverpic==''}}" class="bg" src="../image/default.png" data-item-uuid="{{item.uuid}}" bindtap="clickViewPage"></image>
-                <image wx:else class="bg" src="{{item.coverpic}}" data-item-uuid="{{item.uuid}}" bindtap="clickViewPage"></image>
+                <image wx:if="{{item.coverpicList.length==0}}" class="bg" src="../image/default.png" data-item-uuid="{{item.uuid}}" bindtap="clickViewPage"></image>
+                <image wx:else class="bg" src="{{item.coverpicList[0]}}" data-item-uuid="{{item.uuid}}" bindtap="clickViewPage"></image>
                 <text class="title" data-item-uuid="{{item.uuid}}" bindtap="clickViewPage">{{item.name}}</text>
                 <view class="time">
                     <image src="../image/time.png"></image>
@@ -19,7 +19,7 @@
                 <view class="place">
                     <image src="../image/place.png"></image>
                     <text>{{item.location}}</text>
-                    <text wx:if="{{item.flag=='5'}}" class="btnBox" bindtap="clickViewPageExchange" data-item-uuid="{{item.uuid}}" data-item-num="{{item.integral}}">积分派发</text>
+                    <text wx:if="{{item.flag=='5'}}" class="btnBox" bindtap="clickViewPageExchange" data-item-title="{{item.name}}" data-item-uuid="{{item.uuid}}" data-item-num="{{item.integral}}">积分派发</text>
                 </view>
             </view>
         </view>

@@ -1,22 +1,22 @@
 var httpRequest = require('../../utils/request.js');
+
 Page({
 
     /**
      * 页面的初始数据
      */
     data: {
-        num: '',
-        uuid: '',
-        title: '',
-        queryTaskPeople: []
+        queryAct: [],
+        userSelectUuid: ''
     },
-    //查询报名居民
-    queryTaskPeoplePost(uuid) {
-        var _this = this;
-        httpRequest.request('app/queryActPeople', { activityId: uuid }, function (data) {
+    //查询活动列表
+    quertActiveQuery() {
+        var that = this;
+        httpRequest.requestGetData('app/queryTaskByPeople?uuid=' + that.data.userSelectUuid+'&pageSize=100&pageNum=1', '', function (data) {
             if (data.code == 200) {
-                _this.setData({
-                    queryTaskPeople: data.data.list
+                console.log(data)
+                that.setData({
+                    queryAct: data.data.list
                 })
             }
         })
@@ -26,15 +26,15 @@ Page({
         var that = this;
         wx.showModal({
             title: '温馨提示',
-            content: '是否确认派发该活动积分？',
+            content: '是否确认派发该任务？',
             success: function (res) {
                 if (res.confirm) {
                     var datas = {
-                        type: 1, //类型
-                        foreignId: that.data.uuid, //任务记录id
-                        peopleId: event.currentTarget.dataset.itemName, //用户uuid
-                        foreignName: that.data.title, //任务名称
-                        integral: that.data.num, //积分
+                        type: 2, //类型
+                        foreignId: event.currentTarget.dataset.itemUuid, //任务记录id
+                        peopleId: that.data.userSelectUuid, //用户uuid
+                        foreignName: event.currentTarget.dataset.itemName, //任务名称
+                        integral: event.currentTarget.dataset.itemIntegral, //积分
                     }
                     httpRequest.request('integral/distribute', datas, function (data) {
                         if (data.code == 200) {
@@ -44,14 +44,14 @@ Page({
                                 duration: 1000,
                                 mask: true
                             })
-                            that.queryTaskPeoplePost(that.data.uuid);
+                            that.quertActiveQuery();
                         }
                     })
                 } else if (res.cancel) {
                     console.log('用户点击取消')
                 }
             },
-            fail: function (res) {
+            fail: function(res){
                 console.log(res)
             }
         })
@@ -62,11 +62,9 @@ Page({
      */
     onLoad: function (options) {
         this.setData({
-            num: options.num,
-            uuid: options.uuid,
-            title: options.title,
-        });
-        this.queryTaskPeoplePost(options.uuid);
+            userSelectUuid: options.userSelectUuid
+        })
+        this.quertActiveQuery();
     },
 
     /**

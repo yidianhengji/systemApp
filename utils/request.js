@@ -12,13 +12,27 @@ function requestGet(url, data, success) {
         success: function (res) {
             if (res.data.code == 200) {
                 success(res.data)
+            } else if(res.data.code == 2004) {
+                wx.showModal({
+                    title: '温馨提示',
+                    content: res.data.msg,
+                    success: function (res) {
+                        if (res.confirm) {
+                            wx.navigateTo({
+                                url: '../login/login'
+                            })
+                        } else {
+                            console.log('用户点击取消')
+                        }
+                    }
+                })
             } else {
                 wx.showModal({
                     title: '温馨提示',
                     content: res.data.msg,
                     success: function (res) {
                         if (res.confirm) {
-                            console.log('用户点击确定')
+                            console.log('用户点击取消')
                         } else {
                             console.log('用户点击取消')
                         }
@@ -47,13 +61,27 @@ function requestGetData(url, data, success) {
         success: function (res) {
             if (res.data.code == 200) {
                 success(res.data)
+            } else if (res.data.code == 2004) {
+                wx.showModal({
+                    title: '温馨提示',
+                    content: res.data.msg,
+                    success: function (res) {
+                        if (res.confirm) {
+                            wx.navigateTo({
+                                url: '../login/login'
+                            })
+                        } else {
+                            console.log('用户点击取消')
+                        }
+                    }
+                })
             } else {
                 wx.showModal({
                     title: '温馨提示',
                     content: res.data.msg,
                     success: function (res) {
                         if (res.confirm) {
-                            console.log('用户点击确定')
+                            console.log('用户点击取消')
                         } else {
                             console.log('用户点击取消')
                         }
@@ -82,13 +110,27 @@ function request(url, data, success) {
         success: function (res) {
             if (res.data.code == 200) {
                 success(res.data)
+            } else if (res.data.code == 2004) {
+                wx.showModal({
+                    title: '温馨提示',
+                    content: res.data.msg,
+                    success: function (res) {
+                        if (res.confirm) {
+                            wx.navigateTo({
+                                url: '../login/login'
+                            })
+                        } else {
+                            console.log('用户点击取消')
+                        }
+                    }
+                })
             } else {
                 wx.showModal({
                     title: '温馨提示',
                     content: res.data.msg,
                     success: function (res) {
                         if (res.confirm) {
-                            console.log('用户点击确定')
+                            console.log('用户点击取消')
                         } else {
                             console.log('用户点击取消')
                         }
@@ -114,13 +156,27 @@ function requestHeader(url, data, success) {
         success: function (res) {
             if (res.data.code == 200) {
                 success(res.data)
+            } else if (res.data.code == 2004) {
+                wx.showModal({
+                    title: '温馨提示',
+                    content: res.data.msg,
+                    success: function (res) {
+                        if (res.confirm) {
+                            wx.navigateTo({
+                                url: '../login/login'
+                            })
+                        } else {
+                            console.log('用户点击取消')
+                        }
+                    }
+                })
             } else {
                 wx.showModal({
                     title: '温馨提示',
                     content: res.data.msg,
                     success: function (res) {
                         if (res.confirm) {
-                            console.log('用户点击确定')
+                            console.log('用户点击取消')
                         } else {
                             console.log('用户点击取消')
                         }
